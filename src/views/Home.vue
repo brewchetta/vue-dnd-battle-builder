@@ -1,18 +1,20 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Dungeons & Dragons Battle Builder</h1>
+    <p>I'm sure something will go here later</p>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+
   }
 }
 </script>
+
+<!-- home page / all battles -->
+  <!-- what goes here? can we instead just have a nav bar? possibly a tutorial? -->
+  <!-- how can I differentiate the landing page from the tutorial? -->

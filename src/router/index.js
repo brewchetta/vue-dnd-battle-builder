@@ -11,11 +11,23 @@ Vue.use(VueRouter)
     component: Home
   },
   {
+    path: '/battle',
+    name: 'BattleScreen',
+    component: () => import(/* webpackChunkName: "battle" */ '../views/BattleScreen.vue')
+  },
+  {
+    path: '/battles',
+    name: 'BattleIndex',
+    component: () => import(/* webpackChunkName: "battles" */ '../views/BattleIndex.vue')
+  },
+  {
+    path: '/enemy-builder',
+    name: 'EnemyBuilderMain',
+    component: () => import(/* webpackChunkName: "enemy-builder" */ '../views/EnemyBuilderMain.vue')
+  },
+  {
     path: '/about',
     name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   }
 ]
