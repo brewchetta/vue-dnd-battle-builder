@@ -1,19 +1,17 @@
-# vue-dnd-battle-builder
+# D&D Battle Builder
 
-## Project setup
-```
-npm install
-```
+Possibly to be known as the Battle Screen at some point. I dunno, I'm just spitballing.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+A user can:
 
-### Compiles and minifies for production
-```
-npm run build
-```
+- See all battles
+- Create battles
+- Create enemies
+- Customize enemies
+- Start battles with enemy health / initiative
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Stretches:
+
+- Can persist battles across sessions
+- Has a personalized battles page showing that user's battles
+- GraphQL for easy information gathering
