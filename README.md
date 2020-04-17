@@ -14,4 +14,9 @@ Stretches:
 
 - Can persist battles across sessions
 - Has a personalized battles page showing that user's battles
-- GraphQL for easy information gathering
+- GraphQL for easy information gathering?
+
+Current Phase:
+
+- enemy builder page
+- persisting enemies and retrieving them
