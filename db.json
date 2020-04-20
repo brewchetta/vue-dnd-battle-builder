@@ -1,892 +1,892 @@
 {"monsters":[
 {
  "id":1,
- "name": "Adored Lemure",
- "armorClass": "14",
+ "name": "Austere Bat",
+ "armorClass": "16",
  "challengeRating": "5",
- "alignmentMoral": "1",
- "alignmentLaw": "2",
- "hitpoints": "27"
+ "alignmentMoral": "3",
+ "alignmentLaw": "1",
+ "hitPoints": "5"
 },
 {
  "id":2,
- "name": "Active Rat",
- "armorClass": "14",
- "challengeRating": "2",
+ "name": "Amused Crab",
+ "armorClass": "10",
+ "challengeRating": "6",
  "alignmentMoral": "1",
  "alignmentLaw": "1",
- "hitpoints": "25"
+ "hitPoints": "24"
 },
 {
  "id":3,
- "name": "Adorable Owl",
- "armorClass": "17",
- "challengeRating": "3",
+ "name": "Angry Shrieker",
+ "armorClass": "12",
+ "challengeRating": "2",
  "alignmentMoral": "3",
  "alignmentLaw": "3",
- "hitpoints": "19"
+ "hitPoints": "4"
 },
 {
  "id":4,
- "name": "Aggravating Owl",
- "armorClass": "18",
- "challengeRating": "6",
- "alignmentMoral": "1",
- "alignmentLaw": "2",
- "hitpoints": "20"
+ "name": "Antique Commoner",
+ "armorClass": "12",
+ "challengeRating": "3",
+ "alignmentMoral": "2",
+ "alignmentLaw": "3",
+ "hitPoints": "7"
 },
 {
  "id":5,
- "name": "Assured Spider",
- "armorClass": "13",
- "challengeRating": "1",
- "alignmentMoral": "2",
- "alignmentLaw": "2",
- "hitpoints": "19"
+ "name": "Awesome Bat",
+ "armorClass": "14",
+ "challengeRating": "5",
+ "alignmentMoral": "1",
+ "alignmentLaw": "1",
+ "hitPoints": "2"
 },
 {
  "id":6,
- "name": "Amused Rat",
- "armorClass": "19",
- "challengeRating": "3",
- "alignmentMoral": "1",
- "alignmentLaw": "3",
- "hitpoints": "15"
+ "name": "Anchored Lizard",
+ "armorClass": "10",
+ "challengeRating": "5",
+ "alignmentMoral": "3",
+ "alignmentLaw": "1",
+ "hitPoints": "23"
 },
 {
  "id":7,
- "name": "Attentive Baboon",
- "armorClass": "13",
- "challengeRating": "4",
- "alignmentMoral": "2",
- "alignmentLaw": "1",
- "hitpoints": "14"
+ "name": "Alienated Shrieker",
+ "armorClass": "18",
+ "challengeRating": "6",
+ "alignmentMoral": "1",
+ "alignmentLaw": "3",
+ "hitPoints": "2"
 },
 {
  "id":8,
- "name": "Alert Jackal",
- "armorClass": "13",
- "challengeRating": "1",
- "alignmentMoral": "2",
- "alignmentLaw": "2",
- "hitpoints": "26"
+ "name": "Aware Bat",
+ "armorClass": "16",
+ "challengeRating": "2",
+ "alignmentMoral": "1",
+ "alignmentLaw": "3",
+ "hitPoints": "10"
 },
 {
  "id":9,
- "name": "Assured Quipper",
- "armorClass": "12",
+ "name": "Ajar Deer",
+ "armorClass": "17",
  "challengeRating": "2",
- "alignmentMoral": "3",
- "alignmentLaw": "2",
- "hitpoints": "28"
+ "alignmentMoral": "1",
+ "alignmentLaw": "3",
+ "hitPoints": "7"
 },
 {
  "id":10,
- "name": "Aggravating Frog",
- "armorClass": "19",
- "challengeRating": "4",
+ "name": "Aromatic Sea Horse",
+ "armorClass": "10",
+ "challengeRating": "1",
  "alignmentMoral": "2",
- "alignmentLaw": "2",
- "hitpoints": "7"
+ "alignmentLaw": "1",
+ "hitPoints": "10"
 },
 {
  "id":11,
- "name": "Authentic Owl",
- "armorClass": "11",
- "challengeRating": "4",
- "alignmentMoral": "2",
- "alignmentLaw": "1",
- "hitpoints": "28"
+ "name": "Animated Jackal",
+ "armorClass": "13",
+ "challengeRating": "2",
+ "alignmentMoral": "1",
+ "alignmentLaw": "3",
+ "hitPoints": "23"
 },
 {
  "id":12,
- "name": "Athletic Homunculus",
- "armorClass": "14",
+ "name": "Automatic Goat",
+ "armorClass": "12",
  "challengeRating": "4",
  "alignmentMoral": "3",
- "alignmentLaw": "3",
- "hitpoints": "10"
+ "alignmentLaw": "1",
+ "hitPoints": "20"
 },
 {
  "id":13,
- "name": "Awkward Hyena",
- "armorClass": "13",
- "challengeRating": "6",
- "alignmentMoral": "3",
- "alignmentLaw": "2",
- "hitpoints": "28"
+ "name": "Awful Rat",
+ "armorClass": "12",
+ "challengeRating": "4",
+ "alignmentMoral": "1",
+ "alignmentLaw": "1",
+ "hitPoints": "8"
 },
 {
  "id":14,
- "name": "Ample Badger",
- "armorClass": "10",
- "challengeRating": "3",
+ "name": "Alarming Quipper",
+ "armorClass": "17",
+ "challengeRating": "6",
  "alignmentMoral": "1",
- "alignmentLaw": "3",
- "hitpoints": "21"
+ "alignmentLaw": "1",
+ "hitPoints": "3"
 },
 {
  "id":15,
- "name": "Advanced Rat",
- "armorClass": "14",
- "challengeRating": "5",
- "alignmentMoral": "3",
- "alignmentLaw": "1",
- "hitpoints": "25"
+ "name": "Angelic Homunculus",
+ "armorClass": "11",
+ "challengeRating": "1",
+ "alignmentMoral": "2",
+ "alignmentLaw": "3",
+ "hitPoints": "23"
 },
 {
  "id":16,
- "name": "Amazing Jackal",
+ "name": "Apt Rat",
  "armorClass": "17",
- "challengeRating": "6",
- "alignmentMoral": "3",
+ "challengeRating": "4",
+ "alignmentMoral": "1",
  "alignmentLaw": "3",
- "hitpoints": "30"
+ "hitPoints": "12"
 },
 {
  "id":17,
- "name": "Aged Deer",
- "armorClass": "15",
- "challengeRating": "6",
- "alignmentMoral": "2",
- "alignmentLaw": "2",
- "hitpoints": "6"
+ "name": "Ample Weasel",
+ "armorClass": "10",
+ "challengeRating": "4",
+ "alignmentMoral": "1",
+ "alignmentLaw": "1",
+ "hitPoints": "1"
 },
 {
  "id":18,
- "name": "Accurate Jackal",
- "armorClass": "14",
- "challengeRating": "4",
- "alignmentMoral": "2",
+ "name": "Accurate Badger",
+ "armorClass": "12",
+ "challengeRating": "2",
+ "alignmentMoral": "3",
  "alignmentLaw": "1",
- "hitpoints": "13"
+ "hitPoints": "24"
 },
 {
  "id":19,
- "name": "Angelic Deer",
- "armorClass": "15",
- "challengeRating": "3",
- "alignmentMoral": "2",
- "alignmentLaw": "1",
- "hitpoints": "4"
+ "name": "Angry Hyena",
+ "armorClass": "19",
+ "challengeRating": "6",
+ "alignmentMoral": "3",
+ "alignmentLaw": "2",
+ "hitPoints": "9"
 },
 {
  "id":20,
- "name": "Admired Owl",
- "armorClass": "17",
+ "name": "Authorized Badger",
+ "armorClass": "19",
  "challengeRating": "2",
- "alignmentMoral": "3",
- "alignmentLaw": "3",
- "hitpoints": "16"
+ "alignmentMoral": "1",
+ "alignmentLaw": "1",
+ "hitPoints": "3"
 },
 {
  "id":21,
- "name": "Arid Lizard",
- "armorClass": "11",
- "challengeRating": "1",
- "alignmentMoral": "3",
+ "name": "All Deer",
+ "armorClass": "14",
+ "challengeRating": "6",
+ "alignmentMoral": "1",
  "alignmentLaw": "2",
- "hitpoints": "2"
+ "hitPoints": "9"
 },
 {
  "id":22,
- "name": "Aromatic Goat",
+ "name": "Ambitious Homunculus",
  "armorClass": "11",
- "challengeRating": "1",
- "alignmentMoral": "3",
- "alignmentLaw": "1",
- "hitpoints": "14"
+ "challengeRating": "3",
+ "alignmentMoral": "1",
+ "alignmentLaw": "3",
+ "hitPoints": "26"
 },
 {
  "id":23,
- "name": "Angelic Badger",
- "armorClass": "10",
- "challengeRating": "6",
- "alignmentMoral": "1",
+ "name": "Attentive Cat",
+ "armorClass": "14",
+ "challengeRating": "4",
+ "alignmentMoral": "3",
  "alignmentLaw": "1",
- "hitpoints": "3"
+ "hitPoints": "20"
 },
 {
  "id":24,
- "name": "Annual Commoner",
- "armorClass": "15",
- "challengeRating": "4",
- "alignmentMoral": "2",
+ "name": "Active Octopus",
+ "armorClass": "18",
+ "challengeRating": "5",
+ "alignmentMoral": "1",
  "alignmentLaw": "3",
- "hitpoints": "7"
+ "hitPoints": "22"
 },
 {
  "id":25,
- "name": "Alienated Eagle",
- "armorClass": "12",
- "challengeRating": "6",
- "alignmentMoral": "3",
- "alignmentLaw": "1",
- "hitpoints": "26"
+ "name": "Arid Baboon",
+ "armorClass": "10",
+ "challengeRating": "5",
+ "alignmentMoral": "2",
+ "alignmentLaw": "2",
+ "hitPoints": "28"
 },
 {
  "id":26,
- "name": "Admirable Weasel",
- "armorClass": "11",
- "challengeRating": "5",
- "alignmentMoral": "3",
- "alignmentLaw": "3",
- "hitpoints": "26"
+ "name": "Apprehensive Commoner",
+ "armorClass": "15",
+ "challengeRating": "3",
+ "alignmentMoral": "1",
+ "alignmentLaw": "2",
+ "hitPoints": "20"
 },
 {
  "id":27,
- "name": "Amazing Homunculus",
- "armorClass": "17",
- "challengeRating": "6",
- "alignmentMoral": "3",
- "alignmentLaw": "2",
- "hitpoints": "11"
+ "name": "Accomplished Crab",
+ "armorClass": "15",
+ "challengeRating": "3",
+ "alignmentMoral": "1",
+ "alignmentLaw": "3",
+ "hitPoints": "13"
 },
 {
  "id":28,
- "name": "Avaricious Weasel",
- "armorClass": "11",
- "challengeRating": "5",
- "alignmentMoral": "3",
- "alignmentLaw": "1",
- "hitpoints": "8"
+ "name": "Any Bat",
+ "armorClass": "17",
+ "challengeRating": "3",
+ "alignmentMoral": "2",
+ "alignmentLaw": "3",
+ "hitPoints": "13"
 },
 {
  "id":29,
- "name": "Aggressive Hawk",
- "armorClass": "16",
- "challengeRating": "4",
- "alignmentMoral": "1",
- "alignmentLaw": "2",
- "hitpoints": "20"
+ "name": "Average Octopus",
+ "armorClass": "19",
+ "challengeRating": "1",
+ "alignmentMoral": "2",
+ "alignmentLaw": "3",
+ "hitPoints": "25"
 },
 {
  "id":30,
- "name": "Anguished Bat",
- "armorClass": "10",
- "challengeRating": "6",
- "alignmentMoral": "3",
- "alignmentLaw": "3",
- "hitpoints": "19"
+ "name": "Advanced Crab",
+ "armorClass": "14",
+ "challengeRating": "2",
+ "alignmentMoral": "1",
+ "alignmentLaw": "2",
+ "hitPoints": "10"
 },
 {
  "id":31,
- "name": "Awkward Sea Horse",
- "armorClass": "14",
- "challengeRating": "6",
+ "name": "Amusing Owl",
+ "armorClass": "17",
+ "challengeRating": "5",
  "alignmentMoral": "2",
- "alignmentLaw": "1",
- "hitpoints": "7"
+ "alignmentLaw": "3",
+ "hitPoints": "6"
 },
 {
  "id":32,
- "name": "Awkward Goat",
- "armorClass": "14",
+ "name": "Admired Crab",
+ "armorClass": "17",
  "challengeRating": "2",
- "alignmentMoral": "2",
- "alignmentLaw": "1",
- "hitpoints": "29"
+ "alignmentMoral": "1",
+ "alignmentLaw": "3",
+ "hitPoints": "24"
 },
 {
  "id":33,
- "name": "Another Homunculus",
+ "name": "Aching Frog",
  "armorClass": "13",
- "challengeRating": "1",
+ "challengeRating": "3",
  "alignmentMoral": "2",
  "alignmentLaw": "1",
- "hitpoints": "17"
+ "hitPoints": "27"
 },
 {
  "id":34,
- "name": "Affectionate Shrieker",
- "armorClass": "12",
+ "name": "Awful Goat",
+ "armorClass": "19",
  "challengeRating": "6",
  "alignmentMoral": "1",
- "alignmentLaw": "2",
- "hitpoints": "11"
+ "alignmentLaw": "3",
+ "hitPoints": "24"
 },
 {
  "id":35,
- "name": "Acrobatic Frog",
+ "name": "Absolute Homunculus",
  "armorClass": "10",
  "challengeRating": "5",
- "alignmentMoral": "2",
+ "alignmentMoral": "1",
  "alignmentLaw": "1",
- "hitpoints": "10"
+ "hitPoints": "9"
 },
 {
  "id":36,
- "name": "Anguished Lizard",
- "armorClass": "18",
- "challengeRating": "2",
+ "name": "Agonizing Cat",
+ "armorClass": "15",
+ "challengeRating": "3",
  "alignmentMoral": "2",
- "alignmentLaw": "3",
- "hitpoints": "10"
+ "alignmentLaw": "2",
+ "hitPoints": "1"
 },
 {
  "id":37,
- "name": "Any Spider",
- "armorClass": "13",
- "challengeRating": "6",
- "alignmentMoral": "3",
- "alignmentLaw": "1",
- "hitpoints": "20"
+ "name": "Aggravating Octopus",
+ "armorClass": "16",
+ "challengeRating": "2",
+ "alignmentMoral": "1",
+ "alignmentLaw": "3",
+ "hitPoints": "8"
 },
 {
  "id":38,
- "name": "Anchored Hyena",
+ "name": "Angelic Eagle",
  "armorClass": "17",
- "challengeRating": "5",
+ "challengeRating": "2",
  "alignmentMoral": "2",
- "alignmentLaw": "3",
- "hitpoints": "18"
+ "alignmentLaw": "1",
+ "hitPoints": "7"
 },
 {
  "id":39,
- "name": "Adolescent Octopus",
- "armorClass": "18",
- "challengeRating": "3",
+ "name": "All Eagle",
+ "armorClass": "17",
+ "challengeRating": "4",
  "alignmentMoral": "3",
- "alignmentLaw": "3",
- "hitpoints": "9"
+ "alignmentLaw": "1",
+ "hitPoints": "19"
 },
 {
  "id":40,
- "name": "Alert Hyena",
- "armorClass": "10",
- "challengeRating": "3",
- "alignmentMoral": "1",
- "alignmentLaw": "2",
- "hitpoints": "14"
+ "name": "Adolescent Raven",
+ "armorClass": "19",
+ "challengeRating": "5",
+ "alignmentMoral": "3",
+ "alignmentLaw": "1",
+ "hitPoints": "26"
 },
 {
  "id":41,
- "name": "Amused Eagle",
- "armorClass": "19",
+ "name": "Authentic Lemure",
+ "armorClass": "15",
  "challengeRating": "3",
  "alignmentMoral": "2",
- "alignmentLaw": "1",
- "hitpoints": "23"
+ "alignmentLaw": "2",
+ "hitPoints": "6"
 },
 {
  "id":42,
- "name": "Accomplished Rat",
- "armorClass": "19",
- "challengeRating": "2",
- "alignmentMoral": "1",
+ "name": "Alienated Owl",
+ "armorClass": "13",
+ "challengeRating": "1",
+ "alignmentMoral": "2",
  "alignmentLaw": "3",
- "hitpoints": "18"
+ "hitPoints": "10"
 },
 {
  "id":43,
- "name": "Admired Giant Fire Beetle",
- "armorClass": "14",
- "challengeRating": "6",
+ "name": "Ajar Octopus",
+ "armorClass": "18",
+ "challengeRating": "3",
  "alignmentMoral": "3",
- "alignmentLaw": "1",
- "hitpoints": "6"
+ "alignmentLaw": "2",
+ "hitPoints": "15"
 },
 {
  "id":44,
- "name": "Able Weasel",
- "armorClass": "12",
- "challengeRating": "1",
- "alignmentMoral": "1",
+ "name": "Angelic Baboon",
+ "armorClass": "13",
+ "challengeRating": "2",
+ "alignmentMoral": "3",
  "alignmentLaw": "2",
- "hitpoints": "10"
+ "hitPoints": "20"
 },
 {
  "id":45,
- "name": "Athletic Lemure",
- "armorClass": "18",
- "challengeRating": "3",
- "alignmentMoral": "2",
+ "name": "Alive Jackal",
+ "armorClass": "11",
+ "challengeRating": "1",
+ "alignmentMoral": "1",
  "alignmentLaw": "1",
- "hitpoints": "24"
+ "hitPoints": "16"
 },
 {
  "id":46,
- "name": "Artistic Eagle",
- "armorClass": "16",
- "challengeRating": "3",
- "alignmentMoral": "1",
- "alignmentLaw": "2",
- "hitpoints": "29"
+ "name": "Awful Lemure",
+ "armorClass": "18",
+ "challengeRating": "2",
+ "alignmentMoral": "3",
+ "alignmentLaw": "1",
+ "hitPoints": "14"
 },
 {
  "id":47,
- "name": "Aged Scorpion",
- "armorClass": "18",
- "challengeRating": "4",
+ "name": "Advanced Quipper",
+ "armorClass": "12",
+ "challengeRating": "5",
  "alignmentMoral": "1",
- "alignmentLaw": "3",
- "hitpoints": "23"
+ "alignmentLaw": "2",
+ "hitPoints": "22"
 },
 {
  "id":48,
- "name": "Actual Bat",
- "armorClass": "10",
+ "name": "Authentic Scorpion",
+ "armorClass": "12",
  "challengeRating": "1",
- "alignmentMoral": "2",
- "alignmentLaw": "3",
- "hitpoints": "19"
+ "alignmentMoral": "1",
+ "alignmentLaw": "1",
+ "hitPoints": "23"
 },
 {
  "id":49,
- "name": "Agitated Owl",
- "armorClass": "19",
- "challengeRating": "5",
- "alignmentMoral": "1",
- "alignmentLaw": "1",
- "hitpoints": "27"
+ "name": "Agonizing Homunculus",
+ "armorClass": "11",
+ "challengeRating": "6",
+ "alignmentMoral": "2",
+ "alignmentLaw": "3",
+ "hitPoints": "15"
 },
 {
  "id":50,
- "name": "Aware Awakened Shrub",
- "armorClass": "18",
- "challengeRating": "1",
+ "name": "Animated Frog",
+ "armorClass": "17",
+ "challengeRating": "2",
  "alignmentMoral": "2",
  "alignmentLaw": "1",
- "hitpoints": "14"
+ "hitPoints": "2"
 },
 {
  "id":51,
- "name": "Ajar Hawk",
- "armorClass": "19",
- "challengeRating": "4",
- "alignmentMoral": "1",
- "alignmentLaw": "3",
- "hitpoints": "16"
+ "name": "Abandoned Cat",
+ "armorClass": "17",
+ "challengeRating": "5",
+ "alignmentMoral": "2",
+ "alignmentLaw": "1",
+ "hitPoints": "2"
 },
 {
  "id":52,
- "name": "Anxious Rat",
- "armorClass": "11",
- "challengeRating": "5",
- "alignmentMoral": "1",
- "alignmentLaw": "2",
- "hitpoints": "30"
+ "name": "Accomplished Quipper",
+ "armorClass": "18",
+ "challengeRating": "1",
+ "alignmentMoral": "3",
+ "alignmentLaw": "3",
+ "hitPoints": "3"
 },
 {
  "id":53,
- "name": "Any Eagle",
- "armorClass": "19",
+ "name": "Accurate Bat",
+ "armorClass": "11",
  "challengeRating": "1",
- "alignmentMoral": "2",
+ "alignmentMoral": "1",
  "alignmentLaw": "2",
- "hitpoints": "1"
+ "hitPoints": "17"
 },
 {
  "id":54,
- "name": "Avaricious Cat",
- "armorClass": "10",
- "challengeRating": "4",
- "alignmentMoral": "1",
+ "name": "Assured Homunculus",
+ "armorClass": "19",
+ "challengeRating": "1",
+ "alignmentMoral": "2",
  "alignmentLaw": "1",
- "hitpoints": "11"
+ "hitPoints": "2"
 },
 {
  "id":55,
- "name": "Athletic Shrieker",
- "armorClass": "17",
- "challengeRating": "1",
- "alignmentMoral": "1",
+ "name": "Automatic Weasel",
+ "armorClass": "11",
+ "challengeRating": "5",
+ "alignmentMoral": "2",
  "alignmentLaw": "1",
- "hitpoints": "4"
+ "hitPoints": "21"
 },
 {
  "id":56,
- "name": "Academic Vulture",
- "armorClass": "14",
- "challengeRating": "5",
- "alignmentMoral": "3",
+ "name": "Arid Vulture",
+ "armorClass": "18",
+ "challengeRating": "3",
+ "alignmentMoral": "1",
  "alignmentLaw": "1",
- "hitpoints": "28"
+ "hitPoints": "9"
 },
 {
  "id":57,
- "name": "Able Hyena",
- "armorClass": "10",
+ "name": "Able Weasel",
+ "armorClass": "13",
  "challengeRating": "5",
  "alignmentMoral": "1",
- "alignmentLaw": "2",
- "hitpoints": "12"
+ "alignmentLaw": "1",
+ "hitPoints": "4"
 },
 {
  "id":58,
- "name": "Agonizing Eagle",
- "armorClass": "19",
- "challengeRating": "6",
+ "name": "Afraid Scorpion",
+ "armorClass": "10",
+ "challengeRating": "1",
  "alignmentMoral": "1",
  "alignmentLaw": "2",
- "hitpoints": "18"
+ "hitPoints": "28"
 },
 {
  "id":59,
- "name": "Arid Scorpion",
- "armorClass": "18",
- "challengeRating": "6",
+ "name": "Aggravating Spider",
+ "armorClass": "13",
+ "challengeRating": "1",
  "alignmentMoral": "3",
- "alignmentLaw": "1",
- "hitpoints": "15"
+ "alignmentLaw": "2",
+ "hitPoints": "19"
 },
 {
  "id":60,
- "name": "Adept Octopus",
- "armorClass": "11",
- "challengeRating": "3",
+ "name": "Angry Rat",
+ "armorClass": "13",
+ "challengeRating": "1",
  "alignmentMoral": "3",
- "alignmentLaw": "1",
- "hitpoints": "27"
+ "alignmentLaw": "2",
+ "hitPoints": "26"
 },
 {
  "id":61,
- "name": "Able Goat",
- "armorClass": "13",
- "challengeRating": "4",
- "alignmentMoral": "1",
+ "name": "Alert Giant Fire Beetle",
+ "armorClass": "17",
+ "challengeRating": "6",
+ "alignmentMoral": "2",
  "alignmentLaw": "2",
- "hitpoints": "22"
+ "hitPoints": "7"
 },
 {
  "id":62,
- "name": "Ancient Bat",
- "armorClass": "10",
- "challengeRating": "4",
+ "name": "Artistic Hawk",
+ "armorClass": "13",
+ "challengeRating": "5",
  "alignmentMoral": "2",
- "alignmentLaw": "1",
- "hitpoints": "27"
+ "alignmentLaw": "3",
+ "hitPoints": "3"
 },
 {
  "id":63,
- "name": "Aware Sea Horse",
- "armorClass": "16",
- "challengeRating": "3",
- "alignmentMoral": "1",
- "alignmentLaw": "1",
- "hitpoints": "27"
+ "name": "Attractive Shrieker",
+ "armorClass": "13",
+ "challengeRating": "5",
+ "alignmentMoral": "2",
+ "alignmentLaw": "2",
+ "hitPoints": "14"
 },
 {
  "id":64,
- "name": "Ajar Vulture",
- "armorClass": "14",
+ "name": "Active Lemure",
+ "armorClass": "17",
  "challengeRating": "2",
- "alignmentMoral": "1",
- "alignmentLaw": "3",
- "hitpoints": "12"
+ "alignmentMoral": "3",
+ "alignmentLaw": "1",
+ "hitPoints": "23"
 },
 {
  "id":65,
- "name": "Austere Cat",
- "armorClass": "16",
- "challengeRating": "4",
+ "name": "Assured Shrieker",
+ "armorClass": "18",
+ "challengeRating": "6",
  "alignmentMoral": "1",
  "alignmentLaw": "2",
- "hitpoints": "28"
+ "hitPoints": "4"
 },
 {
  "id":66,
- "name": "Arid Quipper",
+ "name": "Apt Baboon",
  "armorClass": "19",
  "challengeRating": "5",
  "alignmentMoral": "2",
- "alignmentLaw": "3",
- "hitpoints": "25"
+ "alignmentLaw": "1",
+ "hitPoints": "9"
 },
 {
  "id":67,
- "name": "Alienated Vulture",
- "armorClass": "18",
+ "name": "Angelic Octopus",
+ "armorClass": "14",
  "challengeRating": "5",
- "alignmentMoral": "2",
+ "alignmentMoral": "3",
  "alignmentLaw": "3",
- "hitpoints": "6"
+ "hitPoints": "30"
 },
 {
  "id":68,
- "name": "Aggravating Lizard",
- "armorClass": "11",
- "challengeRating": "3",
+ "name": "Affectionate Baboon",
+ "armorClass": "17",
+ "challengeRating": "5",
  "alignmentMoral": "1",
  "alignmentLaw": "2",
- "hitpoints": "27"
+ "hitPoints": "27"
 },
 {
  "id":69,
- "name": "Average Hawk",
- "armorClass": "17",
- "challengeRating": "6",
+ "name": "Avaricious Deer",
+ "armorClass": "11",
+ "challengeRating": "2",
  "alignmentMoral": "3",
  "alignmentLaw": "1",
- "hitpoints": "27"
+ "hitPoints": "2"
 },
 {
  "id":70,
- "name": "Accurate Frog",
- "armorClass": "18",
- "challengeRating": "1",
+ "name": "Athletic Crab",
+ "armorClass": "13",
+ "challengeRating": "3",
  "alignmentMoral": "1",
- "alignmentLaw": "2",
- "hitpoints": "3"
+ "alignmentLaw": "3",
+ "hitPoints": "2"
 },
 {
  "id":71,
- "name": "Awful Bat",
- "armorClass": "19",
- "challengeRating": "3",
- "alignmentMoral": "2",
+ "name": "Athletic Deer",
+ "armorClass": "18",
+ "challengeRating": "6",
+ "alignmentMoral": "3",
  "alignmentLaw": "3",
- "hitpoints": "1"
+ "hitPoints": "21"
 },
 {
  "id":72,
- "name": "Agreeable Giant Fire Beetle",
- "armorClass": "13",
- "challengeRating": "4",
- "alignmentMoral": "1",
- "alignmentLaw": "3",
- "hitpoints": "25"
+ "name": "Able Sea Horse",
+ "armorClass": "16",
+ "challengeRating": "2",
+ "alignmentMoral": "3",
+ "alignmentLaw": "1",
+ "hitPoints": "9"
 },
 {
  "id":73,
- "name": "All Cat",
- "armorClass": "12",
- "challengeRating": "1",
- "alignmentMoral": "1",
- "alignmentLaw": "1",
- "hitpoints": "26"
+ "name": "Amused Badger",
+ "armorClass": "14",
+ "challengeRating": "5",
+ "alignmentMoral": "2",
+ "alignmentLaw": "2",
+ "hitPoints": "19"
 },
 {
  "id":74,
- "name": "Awesome Jackal",
- "armorClass": "18",
- "challengeRating": "2",
+ "name": "Acceptable Quipper",
+ "armorClass": "13",
+ "challengeRating": "3",
  "alignmentMoral": "3",
- "alignmentLaw": "3",
- "hitpoints": "19"
+ "alignmentLaw": "1",
+ "hitPoints": "18"
 },
 {
  "id":75,
- "name": "Anguished Rat",
- "armorClass": "10",
- "challengeRating": "6",
- "alignmentMoral": "1",
- "alignmentLaw": "3",
- "hitpoints": "24"
+ "name": "Arid Eagle",
+ "armorClass": "12",
+ "challengeRating": "1",
+ "alignmentMoral": "3",
+ "alignmentLaw": "1",
+ "hitPoints": "13"
 },
 {
  "id":76,
- "name": "Automatic Goat",
- "armorClass": "19",
- "challengeRating": "2",
- "alignmentMoral": "3",
- "alignmentLaw": "1",
- "hitpoints": "10"
+ "name": "Accomplished Baboon",
+ "armorClass": "18",
+ "challengeRating": "1",
+ "alignmentMoral": "2",
+ "alignmentLaw": "3",
+ "hitPoints": "27"
 },
 {
  "id":77,
- "name": "Acrobatic Hyena",
- "armorClass": "10",
- "challengeRating": "2",
- "alignmentMoral": "1",
- "alignmentLaw": "3",
- "hitpoints": "21"
+ "name": "Awful Hawk",
+ "armorClass": "19",
+ "challengeRating": "6",
+ "alignmentMoral": "2",
+ "alignmentLaw": "2",
+ "hitPoints": "4"
 },
 {
  "id":78,
- "name": "Adolescent Raven",
+ "name": "Altruistic Raven",
  "armorClass": "10",
  "challengeRating": "3",
- "alignmentMoral": "1",
- "alignmentLaw": "3",
- "hitpoints": "27"
+ "alignmentMoral": "2",
+ "alignmentLaw": "1",
+ "hitPoints": "12"
 },
 {
  "id":79,
- "name": "Anchored Weasel",
- "armorClass": "15",
- "challengeRating": "4",
- "alignmentMoral": "2",
- "alignmentLaw": "1",
- "hitpoints": "5"
+ "name": "Amused Hawk",
+ "armorClass": "12",
+ "challengeRating": "6",
+ "alignmentMoral": "1",
+ "alignmentLaw": "3",
+ "hitPoints": "27"
 },
 {
  "id":80,
- "name": "Amazing Vulture",
- "armorClass": "17",
+ "name": "Annual Hyena",
+ "armorClass": "14",
  "challengeRating": "6",
- "alignmentMoral": "2",
- "alignmentLaw": "2",
- "hitpoints": "9"
+ "alignmentMoral": "3",
+ "alignmentLaw": "1",
+ "hitPoints": "13"
 },
 {
  "id":81,
- "name": "Animated Cat",
- "armorClass": "16",
- "challengeRating": "3",
- "alignmentMoral": "3",
+ "name": "Alarmed Hyena",
+ "armorClass": "14",
+ "challengeRating": "2",
+ "alignmentMoral": "2",
  "alignmentLaw": "3",
- "hitpoints": "20"
+ "hitPoints": "22"
 },
 {
  "id":82,
- "name": "Amazing Homunculus",
- "armorClass": "16",
- "challengeRating": "5",
- "alignmentMoral": "2",
+ "name": "Awkward Giant Fire Beetle",
+ "armorClass": "17",
+ "challengeRating": "4",
+ "alignmentMoral": "3",
  "alignmentLaw": "2",
- "hitpoints": "26"
+ "hitPoints": "24"
 },
 {
  "id":83,
- "name": "Admirable Homunculus",
- "armorClass": "11",
- "challengeRating": "6",
- "alignmentMoral": "2",
+ "name": "Alive Quipper",
+ "armorClass": "17",
+ "challengeRating": "1",
+ "alignmentMoral": "3",
  "alignmentLaw": "3",
- "hitpoints": "11"
+ "hitPoints": "6"
 },
 {
  "id":84,
- "name": "Affectionate Commoner",
- "armorClass": "10",
+ "name": "Another Cat",
+ "armorClass": "11",
  "challengeRating": "4",
- "alignmentMoral": "3",
- "alignmentLaw": "1",
- "hitpoints": "9"
+ "alignmentMoral": "2",
+ "alignmentLaw": "2",
+ "hitPoints": "3"
 },
 {
  "id":85,
- "name": "Advanced Giant Fire Beetle",
- "armorClass": "10",
- "challengeRating": "6",
+ "name": "Another Goat",
+ "armorClass": "18",
+ "challengeRating": "3",
  "alignmentMoral": "3",
  "alignmentLaw": "2",
- "hitpoints": "3"
+ "hitPoints": "27"
 },
 {
  "id":86,
- "name": "Actual Awakened Shrub",
- "armorClass": "11",
- "challengeRating": "2",
- "alignmentMoral": "1",
- "alignmentLaw": "1",
- "hitpoints": "15"
-},
-{
- "id":87,
- "name": "Admired Weasel",
- "armorClass": "18",
- "challengeRating": "4",
- "alignmentMoral": "3",
- "alignmentLaw": "3",
- "hitpoints": "8"
-},
-{
- "id":88,
- "name": "All Bat",
- "armorClass": "18",
- "challengeRating": "2",
- "alignmentMoral": "2",
- "alignmentLaw": "2",
- "hitpoints": "18"
-},
-{
- "id":89,
- "name": "Apprehensive Quipper",
- "armorClass": "11",
- "challengeRating": "3",
- "alignmentMoral": "3",
- "alignmentLaw": "3",
- "hitpoints": "17"
-},
-{
- "id":90,
- "name": "Avaricious Owl",
- "armorClass": "15",
- "challengeRating": "5",
- "alignmentMoral": "1",
- "alignmentLaw": "3",
- "hitpoints": "26"
-},
-{
- "id":91,
- "name": "Apprehensive Rat",
- "armorClass": "18",
- "challengeRating": "4",
- "alignmentMoral": "3",
- "alignmentLaw": "3",
- "hitpoints": "1"
-},
-{
- "id":92,
- "name": "Appropriate Octopus",
- "armorClass": "16",
- "challengeRating": "2",
- "alignmentMoral": "1",
- "alignmentLaw": "3",
- "hitpoints": "7"
-},
-{
- "id":93,
- "name": "Annual Hyena",
- "armorClass": "15",
- "challengeRating": "1",
- "alignmentMoral": "3",
- "alignmentLaw": "2",
- "hitpoints": "3"
-},
-{
- "id":94,
- "name": "Animated Scorpion",
- "armorClass": "15",
- "challengeRating": "4",
- "alignmentMoral": "2",
- "alignmentLaw": "3",
- "hitpoints": "23"
-},
-{
- "id":95,
- "name": "Awesome Eagle",
- "armorClass": "11",
- "challengeRating": "6",
- "alignmentMoral": "1",
- "alignmentLaw": "2",
- "hitpoints": "21"
-},
-{
- "id":96,
- "name": "Accurate Sea Horse",
- "armorClass": "15",
- "challengeRating": "2",
- "alignmentMoral": "1",
- "alignmentLaw": "3",
- "hitpoints": "22"
-},
-{
- "id":97,
- "name": "Aching Cat",
+ "name": "Acclaimed Goat",
  "armorClass": "12",
  "challengeRating": "3",
  "alignmentMoral": "1",
+ "alignmentLaw": "1",
+ "hitPoints": "15"
+},
+{
+ "id":87,
+ "name": "Artistic Quipper",
+ "armorClass": "10",
+ "challengeRating": "6",
+ "alignmentMoral": "1",
+ "alignmentLaw": "1",
+ "hitPoints": "14"
+},
+{
+ "id":88,
+ "name": "Appropriate Scorpion",
+ "armorClass": "19",
+ "challengeRating": "6",
+ "alignmentMoral": "1",
+ "alignmentLaw": "2",
+ "hitPoints": "18"
+},
+{
+ "id":89,
+ "name": "Alarmed Quipper",
+ "armorClass": "13",
+ "challengeRating": "3",
+ "alignmentMoral": "3",
+ "alignmentLaw": "1",
+ "hitPoints": "15"
+},
+{
+ "id":90,
+ "name": "Attentive Giant Fire Beetle",
+ "armorClass": "17",
+ "challengeRating": "5",
+ "alignmentMoral": "2",
  "alignmentLaw": "3",
- "hitpoints": "13"
+ "hitPoints": "24"
+},
+{
+ "id":91,
+ "name": "Anguished Sea Horse",
+ "armorClass": "11",
+ "challengeRating": "5",
+ "alignmentMoral": "2",
+ "alignmentLaw": "3",
+ "hitPoints": "6"
+},
+{
+ "id":92,
+ "name": "Aggravating Goat",
+ "armorClass": "15",
+ "challengeRating": "2",
+ "alignmentMoral": "3",
+ "alignmentLaw": "2",
+ "hitPoints": "2"
+},
+{
+ "id":93,
+ "name": "Anguished Commoner",
+ "armorClass": "17",
+ "challengeRating": "5",
+ "alignmentMoral": "2",
+ "alignmentLaw": "2",
+ "hitPoints": "1"
+},
+{
+ "id":94,
+ "name": "Actual Hawk",
+ "armorClass": "11",
+ "challengeRating": "4",
+ "alignmentMoral": "3",
+ "alignmentLaw": "2",
+ "hitPoints": "25"
+},
+{
+ "id":95,
+ "name": "Adorable Quipper",
+ "armorClass": "10",
+ "challengeRating": "3",
+ "alignmentMoral": "1",
+ "alignmentLaw": "3",
+ "hitPoints": "9"
+},
+{
+ "id":96,
+ "name": "Ajar Octopus",
+ "armorClass": "17",
+ "challengeRating": "2",
+ "alignmentMoral": "1",
+ "alignmentLaw": "2",
+ "hitPoints": "11"
+},
+{
+ "id":97,
+ "name": "Aching Homunculus",
+ "armorClass": "11",
+ "challengeRating": "1",
+ "alignmentMoral": "3",
+ "alignmentLaw": "3",
+ "hitPoints": "21"
 },
 {
  "id":98,
- "name": "Afraid Jackal",
- "armorClass": "15",
+ "name": "Apt Goat",
+ "armorClass": "18",
  "challengeRating": "4",
- "alignmentMoral": "1",
- "alignmentLaw": "2",
- "hitpoints": "30"
+ "alignmentMoral": "2",
+ "alignmentLaw": "3",
+ "hitPoints": "20"
 },
 {
  "id":99,
- "name": "Alienated Awakened Shrub",
- "armorClass": "10",
- "challengeRating": "5",
- "alignmentMoral": "3",
- "alignmentLaw": "3",
- "hitpoints": "7"
+ "name": "Angry Commoner",
+ "armorClass": "16",
+ "challengeRating": "3",
+ "alignmentMoral": "2",
+ "alignmentLaw": "2",
+ "hitPoints": "4"
 }]}

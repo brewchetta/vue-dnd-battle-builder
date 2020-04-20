@@ -37,4 +37,10 @@ export default {
 </script>
 
 <style lang="css" scoped>
+  .monster-list-item p {
+    background-image: linear-gradient(#333, #000);
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+  }
 </style>
