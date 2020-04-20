@@ -1,0 +1,13 @@
+{
+  "monsters": [
+    {
+      "id": 1,
+      "name": "Goblin",
+      "armorClass": 10,
+      "alignmentLawChaos": 2,
+      "alignmentGoodEvil": 3,
+      "challengeRating": 0.5,
+      "hitPoints": 10
+    }
+  ]
+}
