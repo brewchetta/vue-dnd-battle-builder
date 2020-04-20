@@ -1,9 +1,9 @@
-import fetchService from './src/fetchService'
+const fs = require('fs')
 
 // this is something to quickly spin up dummy data for monsters
 
 const adjectives = [
-  "abandoned","able","absolute","academic","acceptable","acclaimed","accomplished","accurate","aching","acidic","acrobatic","active","actual","adept","admirable","admired","adolescent","adorable","adored","advanced","adventurous","affectionate","afraid","aged","aggravating","aggressive","agile","agitated","agonizing","agreeable","ajar","alarmed","alarming","alert","alienated","alive","all","altruistic","amazing","ambitious","ample","amused","amusing","anchored","ancient","angelic","angry","anguished","animated","annual","another","antique","anxious","any","apprehensive","appropriate","apt","arctic","arid","aromatic","artistic","ashamed","assured","astonishing","athletic","attached","attentive","attractive","austere","authentic","authorized","automatic","avaricious","average","aware","awesome","awful","awkward"
+  "Abandoned","Able","Absolute","Academic","Acceptable","Acclaimed","Accomplished","Accurate","Aching","Acidic","Acrobatic","Active","Actual","Adept","Admirable","Admired","Adolescent","Adorable","Adored","Advanced","Adventurous","Affectionate","Afraid","Aged","Aggravating","Aggressive","Agile","Agitated","Agonizing","Agreeable","Ajar","Alarmed","Alarming","Alert","Alienated","Alive","All","Altruistic","Amazing","Ambitious","Ample","Amused","Amusing","Anchored","Ancient","Angelic","Angry","Anguished","Animated","Annual","Another","Antique","Anxious","Any","Apprehensive","Appropriate","Apt","Arctic","Arid","Aromatic","Artistic","Ashamed","Assured","Astonishing","Athletic","Attached","Attentive","Attractive","Austere","Authentic","Authorized","Automatic","Avaricious","Average","Aware","Awesome","Awful","Awkward"
 ]
 
 const monsterTypes = [
@@ -11,18 +11,37 @@ const monsterTypes = [
 ]
 
 console.log("--- Seeding Monsters ---")
-console.log("Preparing...")
+console.log("Building monster list...")
 
-for (i = 0; i < 100; i++) {
-  fetchService.postMonster({
-    process.stdout.write(`${i} seeded...\r`)
-    name: `${adjectives[Math.floor(Math.random() * adjectives.length)]} ${monsterTypes[Math.floor(Math.random() * adjectives.length)]}`,
+let fileWrite = '{"monsters":['
+const fileArray = []
+
+for (i = 1; i < 100; i++) {
+
+  process.stdout.write(`${i} seeded...\r`)
+
+  monster = {
+    name: `${adjectives[Math.floor(Math.random() * adjectives.length)]} ${monsterTypes[Math.floor(Math.random() * monsterTypes.length)]}`,
     armorClass: Math.floor(Math.random() * 10 + 10),
     challengeRating: Math.ceil(Math.random() * 6),
     alignmentMoral: Math.ceil(Math.random() * 3),
     alignmentLaw: Math.ceil(Math.random() * 3),
     hitPoints: Math.ceil(Math.random() * 30)
-  })
-}
+  }
 
-console.log("--- Completed Seed ---")
+  fileArray.push(`\n{\n "id":${i},\n "name": "${monster.name}",\n "armorClass": "${monster.armorClass}",\n "challengeRating": "${monster.challengeRating}",\n "alignmentMoral": "${monster.alignmentMoral}",\n "alignmentLaw": "${monster.alignmentLaw}",\n "hitpoints": "${monster.hitPoints}"\n}`)
+
+} // end loop
+
+console.log('---Parsing Monster List---')
+
+fileArray.join(',')
+fileWrite += `${fileArray}]}`
+
+console.log('--- Writing To File ---');
+
+fs.writeFile('db.json', fileWrite, err => {
+  if (err) throw err;
+});
+
+console.log('---Completed Seed---')
