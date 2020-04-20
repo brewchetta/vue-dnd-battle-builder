@@ -2,26 +2,35 @@
 
 <template lang="html">
   <div class="monsters-index">
+
     <h1>Monsters Index</h1>
+
+    <MonsterListItem
+    v-for="monster in allMonsters"
+    :monster="monster"
+    :currentMonsterCard="currentMonsterCard"
+    @toggle-monster-card="toggleMonsterCard" />
+
   </div>
 </template>
 
 <script>
 import fetchService from '@/fetchService'
+import MonsterListItem from '@/components/MonsterListItem'
 
 export default {
   data() {
     return {
       currentMonsters: [],
-      page: 1
+      page: 1,
+      allMonsters: [],
+      currentMonsterCard: 0
     }
   },
   methods: {
     fetchAllMonsters() {
       fetchService.allMonsters()
-      .then(monsters => {
-        console.log(monsters)
-      })
+      .then(monsters => this.allMonsters = monsters)
     },
     fetchMonster(id) {
       fetchService.monster(id)
@@ -34,10 +43,20 @@ export default {
       .then(monsters => {
         console.log(monsters)
       })
+    },
+    toggleMonsterCard(id) {
+      if (this.currentMonsterCard === id) {
+        this.currentMonsterCard = 0
+      } else {
+        this.currentMonsterCard = id
+      }
     }
   },
   created() {
     this.fetchAllMonsters()
+  },
+  components: {
+    MonsterListItem
   }
 
 }
