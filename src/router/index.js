@@ -26,6 +26,11 @@ Vue.use(VueRouter)
     component: () => import(/* webpackChunkName: "enemy-builder" */ '../views/EnemyBuilderMain.vue')
   },
   {
+    path: '/monsters-index',
+    name: 'MonstersIndex',
+    component: () => import(/* webpackChunkName: "about" */ '../views/MonstersIndex.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')

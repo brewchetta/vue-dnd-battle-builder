@@ -5,6 +5,7 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/battles">Battles Index</router-link> |
     <router-link to="/battle">Battle Screen</router-link> |
+    <router-link to="/monsters-index">Monsters Index</router-link> |
     <router-link to="/enemy-builder">Enemy Builder</router-link> |
     <router-link to="/about">About</router-link>
   </div>

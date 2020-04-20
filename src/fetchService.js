@@ -25,8 +25,10 @@ const monsterPage = options => {
   return fetch(`${MONSTERS_ENDPOINT}?_page=${options && options.page || 1}&_limit=${options && options.limit || 10}`)
 }
 
-export default const fetchService = {
+const fetchService = {
   allMonsters,
   monster,
   monsterPage
 }
+
+export default fetchService
