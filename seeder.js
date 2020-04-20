@@ -1,6 +1,7 @@
-const fs = require('fs')
-
 // this is something to quickly spin up dummy data for monsters
+// it WILL get replaced
+
+const fs = require('fs')
 
 const adjectives = [
   "Abandoned","Able","Absolute","Academic","Acceptable","Acclaimed","Accomplished","Accurate","Aching","Acidic","Acrobatic","Active","Actual","Adept","Admirable","Admired","Adolescent","Adorable","Adored","Advanced","Adventurous","Affectionate","Afraid","Aged","Aggravating","Aggressive","Agile","Agitated","Agonizing","Agreeable","Ajar","Alarmed","Alarming","Alert","Alienated","Alive","All","Altruistic","Amazing","Ambitious","Ample","Amused","Amusing","Anchored","Ancient","Angelic","Angry","Anguished","Animated","Annual","Another","Antique","Anxious","Any","Apprehensive","Appropriate","Apt","Arctic","Arid","Aromatic","Artistic","Ashamed","Assured","Astonishing","Athletic","Attached","Attentive","Attractive","Austere","Authentic","Authorized","Automatic","Avaricious","Average","Aware","Awesome","Awful","Awkward"
