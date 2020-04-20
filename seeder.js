@@ -30,7 +30,7 @@ for (i = 1; i < 100; i++) {
     hitPoints: Math.ceil(Math.random() * 30)
   }
 
-  fileArray.push(`\n{\n "id":${i},\n "name": "${monster.name}",\n "armorClass": "${monster.armorClass}",\n "challengeRating": "${monster.challengeRating}",\n "alignmentMoral": "${monster.alignmentMoral}",\n "alignmentLaw": "${monster.alignmentLaw}",\n "hitpoints": "${monster.hitPoints}"\n}`)
+  fileArray.push(`\n{\n "id":${i},\n "name": "${monster.name}",\n "armorClass": "${monster.armorClass}",\n "challengeRating": "${monster.challengeRating}",\n "alignmentMoral": "${monster.alignmentMoral}",\n "alignmentLaw": "${monster.alignmentLaw}",\n "hitPoints": "${monster.hitPoints}"\n}`)
 
 } // end loop
 
