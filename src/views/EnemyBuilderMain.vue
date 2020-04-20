@@ -20,8 +20,8 @@
       <br/>
 
       <label>Alignment (switch to two radio buttons?)</label>
-      <input v-model="alignment"
-      type="text"
+      <input v-model="alignmentMoral"
+      type="number"
       name="alignment"
       value="">
 
@@ -62,7 +62,8 @@ export default {
   data() {
     return {
       name: "",
-      alignment: "",
+      alignmentMoral: 1,
+      alignmentLaw: 1,
       challengeRating: "0",
       armorClass: 10,
       hitPoints: 10
