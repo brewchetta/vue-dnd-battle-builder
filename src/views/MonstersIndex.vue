@@ -1,4 +1,4 @@
-<!-- shows a paginated and (hopefully) filterable grouping of monsters -->
+<!-- shows a paginated and (hopefully soon to be) filterable grouping of monsters -->
 
 <template lang="html">
   <div class="monsters-index">
@@ -6,10 +6,14 @@
     <h1>Monsters Index</h1>
 
     <MonsterListItem
-    v-for="monster in allMonsters"
+    v-for="monster in currentMonsters"
+    :key="monster.id"
     :monster="monster"
     :currentMonsterCard="currentMonsterCard"
     @toggle-monster-card="toggleMonsterCard" />
+
+    <button @click="paginate(false)">Previous</button>
+    <button @click="paginate(true)">Next</button>
 
   </div>
 </template>
@@ -23,27 +27,33 @@ export default {
     return {
       currentMonsters: [],
       page: 1,
-      allMonsters: [],
       currentMonsterCard: 0
     }
   },
   methods: {
-    fetchAllMonsters() {
-      fetchService.allMonsters()
-      .then(monsters => this.allMonsters = monsters)
-    },
+
     fetchMonster(id) {
       fetchService.monster(id)
       .then(monster => {
         console.log(monster)
       })
     },
+
     fetchMonsterPage(options) {
-      fetchService.allMonsters(options)
-      .then(monsters => {
-        console.log(monsters)
-      })
+      fetchService.monsterPage(options)
+      .then(monsters => this.currentMonsters = monsters)
     },
+
+    paginate(isForwards) {
+      if (isForwards && this.currentMonsters.length > 9) {
+        this.page ++
+        this.fetchMonsterPage({page: this.page})
+      } else if (!isForwards && this.page > 1) {
+        this.page --
+        this.fetchMonsterPage({page: this.page})
+      }
+    },
+
     toggleMonsterCard(id) {
       if (this.currentMonsterCard === id) {
         this.currentMonsterCard = 0
@@ -51,9 +61,10 @@ export default {
         this.currentMonsterCard = id
       }
     }
+
   },
   created() {
-    this.fetchAllMonsters()
+    this.fetchMonsterPage()
   },
   components: {
     MonsterListItem

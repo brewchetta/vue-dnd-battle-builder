@@ -28,6 +28,7 @@ const monster = id => {
 
 // get monsters through pagination
 const monsterPage = options => {
+  console.log("Fetching monster page")
   return fetch(`${MONSTERS_ENDPOINT}?_page=${options && options.page || 1}&_limit=${options && options.limit || 10}`)
   .then(parseJSON)
   .catch(catchError)
