@@ -5,6 +5,7 @@
 
     <h1>Monsters Index</h1>
 
+    <!-- current monsters list based on page -->
     <MonsterListItem
     v-for="monster in currentMonsters"
     :key="monster.id"
@@ -12,8 +13,15 @@
     :currentMonsterCard="currentMonsterCard"
     @toggle-monster-card="toggleMonsterCard" />
 
-    <button @click="paginate(false)">Previous</button>
-    <button @click="paginate(true)">Next</button>
+    <!-- Previous page button -->
+    <button @click="paginate(false)"
+    :disabled="page <= 1"
+    >Previous</button>
+
+    <!-- Next page button -->
+    <button @click="paginate(true)"
+    :disabled="currentMonsters.length <= 9"
+    >Next</button>
 
   </div>
 </template>
