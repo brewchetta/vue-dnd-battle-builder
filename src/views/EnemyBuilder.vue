@@ -10,7 +10,7 @@
 
     <h1>Enemy Builder (Main View)</h1>
 
-    <form>
+    <form @submit="handleSubmit">
 
       <label>Name</label>
       <input v-model="name"
@@ -30,7 +30,7 @@
 
       <label>Challenge Rating (select dropdown in order to get the 1/8 and stuff)</label>
       <input v-model="challengeRating"
-      type="text"
+      type="number"
       name="challenge-rating"
       value="">
 
@@ -50,9 +50,9 @@
       name="hit-points"
       value="">
 
-    </form>
+      <input type="submit" name="submit" value="Submit">
 
-    <p v-show="name.length">Name: {{name}}</p>
+    </form>
 
   </div>
 </template>
@@ -62,6 +62,7 @@ import fetchService from '@/fetchService'
 
 export default {
   name: 'EnemyBuilderMain',
+
   data() {
     return {
       id: 0,
@@ -74,6 +75,7 @@ export default {
       // abilities ought to be a seperate set of components created by an array here
     }
   },
+
   created() {
     // if this template was reached through a specific monster edit, fill out details
     if (this.$route.params.monsterId) {
@@ -87,6 +89,23 @@ export default {
         this.hitPoints = m.hitPoints
         this.id = m.id
       })
+    }
+  },
+
+  methods: {
+    handleSubmit(e) {
+      e.preventDefault()
+      const {name, alignmentMoral, alignmentLaw, challengeRating, armorClass, hitPoints, id} = this
+      const m = {name, alignmentMoral, alignmentLaw, challengeRating, armorClass, hitPoints}
+      // console.log(id)
+      if (id <= 0) {
+        fetchService.postMonster(m)
+        .then(console.log)
+      } else {
+        m.id = id
+        fetchService.patchMonster(m)
+        .then(console.log)
+      }
     }
   }
 }

@@ -28,7 +28,6 @@ const monster = id => {
 
 // get monsters through pagination
 const monsterPage = options => {
-  console.log("Fetching monster page")
   return fetch(`${MONSTERS_ENDPOINT}?_page=${options && options.page || 1}&_limit=${options && options.limit || 10}`)
   .then(parseJSON)
   .catch(catchError)
@@ -45,11 +44,23 @@ const postMonster = monster => {
   .catch(catchError)
 }
 
+// patch monster
+const patchMonster = monster => {
+  return fetch(`${MONSTERS_ENDPOINT}/${monster.id}`, {
+    method: 'PATCH',
+    headers,
+    body: JSON.stringify(monster)
+  })
+  .then(parseJSON)
+  .catch(catchError)
+}
+
 const fetchService = {
   allMonsters,
   monster,
   monsterPage,
-  postMonster
+  postMonster,
+  patchMonster
 }
 
 export default fetchService
