@@ -8,6 +8,8 @@
     <p>Challenge Rating: {{monster.challengeRating}}</p>
     <p>Alignment: {{monster.alignmentLaw}}law {{monster.alignmentMoral}}moral</p>
 
+    <router-link :to="{ name: 'EnemyBuilderEdit', params: {monsterId: monster.id} }">Edit</router-link>
+
   </div>
 
 </template>
