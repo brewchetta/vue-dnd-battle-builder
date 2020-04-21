@@ -3,6 +3,7 @@
   <!-- this should be available as its own routed page as well as a side component for quick builds -->
   <!-- dms add necessary info (stats, bonuses, etc) but can also modify to add specific weapons / attacks -->
   <!-- in future versions this should auto-add a CR -->
+<!-- this should be used when building or editing a monster -->
 
 <template lang="html">
   <div class="enemy-builder-main">
@@ -57,10 +58,13 @@
 </template>
 
 <script>
+import fetchService from '@/fetchService'
+
 export default {
   name: 'EnemyBuilderMain',
   data() {
     return {
+      id: 0,
       name: "",
       alignmentMoral: 1,
       alignmentLaw: 1,
@@ -68,6 +72,21 @@ export default {
       armorClass: 10,
       hitPoints: 10
       // abilities ought to be a seperate set of components created by an array here
+    }
+  },
+  created() {
+    // if this template was reached through a specific monster edit, fill out details
+    if (this.$route.params.monsterId) {
+      fetchService.monster(this.$route.params.monsterId)
+      .then(m => {
+        this.name = m.name
+        this.alignmentMoral = m.alignmentMoral
+        this.alignmentLaw = m.alignmentLaw
+        this.challengeRating = m.challengeRating
+        this.armorClass = m.armorClass
+        this.hitPoints = m.hitPoints
+        this.id = m.id
+      })
     }
   }
 }
