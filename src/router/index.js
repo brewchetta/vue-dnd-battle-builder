@@ -23,12 +23,12 @@ Vue.use(VueRouter)
   {
     path: '/enemy-builder',
     name: 'EnemyBuilderMain',
-    component: () => import(/* webpackChunkName: "enemy-builder" */ '../views/EnemyBuilderMain.vue')
+    component: () => import(/* webpackChunkName: "enemy-builder" */ '../views/EnemyBuilder.vue')
   },
   {
     path: '/enemy-builder/:monsterId',
     name: 'EnemyBuilderEdit',
-    component: () => import(/* webpackChunkName: "enemy-builder" */ '../views/EnemyBuilderMain.vue')
+    component: () => import(/* webpackChunkName: "enemy-builder" */ '../views/EnemyBuilder.vue')
   },
   {
     path: '/monsters-index',
