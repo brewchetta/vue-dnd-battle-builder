@@ -11,7 +11,7 @@ export const mutations = {
     const m = {...monster}
     state.idTag++
     m.idTag = state.idTag
-    m.currentHP = m.hitPoints
+    m.currentHP = parseInt(m.hitPoints)
     m.conditions = []
     // add initiative?
     // m.init = Math.ceil(Math.random() * 20) + m.dex
@@ -32,7 +32,7 @@ export const mutations = {
 
   // in order for alter monster to work it must be passed an object with changes including an idTag for the corresponding monster
   ALTER_MONSTER(state, changes) {
-    const m = state.monsters.find(monster => monster.idTag === changes.idTag)
+    const m = state.monsters[changes.idTag]
     if (m) {
       Object.keys(changes).forEach(key => m[key] = changes[key])
     }

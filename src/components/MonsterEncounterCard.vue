@@ -6,7 +6,7 @@
       <p>Challenge Rating: {{monster.challengeRating}}</p>
       <p>Alignment: {{monster.alignmentLaw}}law {{monster.alignmentMoral}}moral</p>
     </div>
-    <button type="button" name="subtract-hitpoint-button" @click="alterHitPoints">-1</button>
+    <button type="button" name="subtract-hitpoint-button" @click="alterHitPoints(monster.currentHP - 1)">-1</button>
     <button type="button" name="subtract-hitpoint-button" @click="alterHitPoints(monster.currentHP + 1)">+1</button>
 
     <button type="button" name="remove-monster-button" @click="removeMonster">--</button>
@@ -29,8 +29,8 @@ export default {
     removeMonster() {
       this.$store.dispatch('removeMonster', this.monster.idTag)
     },
-    alterHitPoints(currentHP = this.monster.currentHP - 1) {
-      // this will default to subtracting one hit point
+    alterHitPoints(currentHP) {
+      console.log(currentHP)
       this.$store.dispatch('alterMonster', {idTag: this.monster.idTag, currentHP})
     },
   }
