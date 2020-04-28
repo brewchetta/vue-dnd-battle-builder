@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="monster-encounter-card">
 
-    <p>Name: {{monster.name}} | {{monster.currentHP}} HP | {{monster.armorClass}} AC</p>
+    <p @click="toggleExpand">Name: {{monster.name}} | {{monster.currentHP}} HP | {{monster.armorClass}} AC</p>
     <div v-if="expanded" class="monster-encounter-card-expanded">
       <p>Challenge Rating: {{monster.challengeRating}}</p>
       <p>Alignment: {{monster.alignmentLaw}}law {{monster.alignmentMoral}}moral</p>
@@ -32,6 +32,9 @@ export default {
     alterHitPoints(currentHP) {
       this.$store.dispatch('alterMonster', {idTag: this.monster.idTag, currentHP})
     },
+    toggleExpand() {
+      this.expanded = !this.expanded
+    }
   }
 }
 </script>
