@@ -5,12 +5,20 @@
   <!-- interface to add cards -->
 
 <template lang="html">
-  <h1>Battle Screen</h1>
+  <div>
+    <h1>Battle Screen</h1>
+    <MonsterSelector />
+  </div>
 </template>
 
 <script>
+import MonsterSelector from '@/components/MonsterSelector'
+
 export default {
-  name: 'BattleScreen'
+  name: 'BattleScreen',
+  components: {
+    MonsterSelector
+  }
 }
 </script>
 

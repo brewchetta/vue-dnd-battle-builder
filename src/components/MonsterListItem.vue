@@ -4,7 +4,7 @@
 
   <div class="monster-list-item">
 
-      <p @click="handleClick">{{monster.name}} | {{monster.armorClass}} AC | {{monster.challengeRating}} CR</p>
+      <p><span @click="handleClick">{{monster.name}} | {{monster.armorClass}} AC | {{monster.challengeRating}} CR</span> <button v-if="selectable">+</button></p>
 
       <MonsterListCard v-if="showCard" :monster="monster" />
 
@@ -18,7 +18,8 @@ import MonsterListCard from '@/components/MonsterListCard'
 export default {
   props: {
     monster: Object,
-    currentMonsterCard: Number
+    currentMonsterCard: Number,
+    selectable: Boolean
   },
   methods: {
     handleClick() {

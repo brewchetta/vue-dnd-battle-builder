@@ -1,16 +1,16 @@
 <!-- shows a paginated and (hopefully soon to be) filterable grouping of monsters -->
 
 <template lang="html">
-  <div class="monsters-index">
+  <div class="monster-selector">
 
-    <h1>Monsters Index</h1>
+    <h1>Monster Selector</h1>
 
     <!-- current monsters list based on page -->
     <MonsterListItem
     v-for="monster in currentMonsters"
     :key="monster.id"
     :monster="monster"
-    :selectable="false"
+    :selectable="true"
     :currentMonsterCard="currentMonsterCard"
     @toggle-monster-card="toggleMonsterCard" />
 
@@ -84,4 +84,7 @@ export default {
 </script>
 
 <style lang="css" scoped>
+  .monster-selector {
+    width: 50%;
+  }
 </style>
