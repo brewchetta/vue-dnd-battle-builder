@@ -6,9 +6,6 @@
 <!-- this should be used when building or editing a monster -->
 
 <!--
-languages (allow for multiple)
-challenge (xp derived from challenge)
-environment (multiple allowed)
 add actions
 add description -->
 
@@ -21,7 +18,7 @@ add description -->
 
       <!-- Name -->
       <label for="name">Name</label>
-      <input v-model="name"
+      <input required v-model="name"
       type="text"
       name="name"
       value="">
@@ -84,7 +81,7 @@ add description -->
 
       <!-- Armor Class -->
       <label for="armor-class">Armor Class (number)</label>
-      <input v-model="armorClass"
+      <input required v-model="armorClass"
       type="number"
       name="armor-class"
       value="">
@@ -93,7 +90,7 @@ add description -->
 
       <!-- Hit Points -->
       <label>Hit Points</label>
-      <input v-model="hitPoints"
+      <input required v-model="hitPoints"
       type="number"
       name="hit-points"
       value="">
@@ -102,45 +99,45 @@ add description -->
 
       <!-- Speed -->
       <label for="speed">Speed</label>
-      <input v-model="speed" type="number" name="speed" value="" step="5" min="0">
+      <input required v-model="speed" type="number" name="speed" value="" step="5" min="0">
       <label for="swim-speed">Swim Speed</label>
-      <input v-model="swimSpeed" type="number" name="speed" value="" step="5" min="0">
+      <input required v-model="swimSpeed" type="number" name="speed" value="" step="5" min="0">
       <label for="fly-speed">Fly Speed</label>
-      <input v-model="flyingSpeed" type="number" name="speed" value="" step="5" min="0">
+      <input required v-model="flyingSpeed" type="number" name="speed" value="" step="5" min="0">
       <label for="burrowing-speed">Burrowing Speed</label>
-      <input v-model="burrowingSpeed" type="number" name="speed" value="" step="5" min="0">
+      <input required v-model="burrowingSpeed" type="number" name="speed" value="" step="5" min="0">
 
       <br/>
 
       <!-- Attributes -->
       <label for="str">STR</label>
-      <input v-model="str" type="number" name="str" value="" min="0" max="30">
+      <input required v-model="str" type="number" name="str" value="" min="0" max="30">
       <label for="dex">DEX</label>
-      <input v-model="dex" type="number" name="dex" value="" min="0" max="30">
+      <input required v-model="dex" type="number" name="dex" value="" min="0" max="30">
       <label for="con">CON</label>
-      <input v-model="con" type="number" name="con" value="" min="0" max="30">
+      <input required v-model="con" type="number" name="con" value="" min="0" max="30">
       <label for="int">INT</label>
-      <input v-model="int" type="number" name="int" value="" min="0" max="30">
+      <input required v-model="int" type="number" name="int" value="" min="0" max="30">
       <label for="wis">WIS</label>
-      <input v-model="wis" type="number" name="wis" value="" min="0" max="30">
+      <input required v-model="wis" type="number" name="wis" value="" min="0" max="30">
       <label for="cha">CHA</label>
-      <input v-model="cha" type="number" name="cha" value="" min="0" max="30">
+      <input required v-model="cha" type="number" name="cha" value="" min="0" max="30">
 
       <br/>
 
       <!-- Saving Throws -->
       <label for="str-save">STR Save</label>
-      <input v-model="strSave" type="number" name="str-save" value="" min="0" max="10">
+      <input required v-model="strSave" type="number" name="str-save" value="" min="0" max="10">
       <label for="dex-save">DEX Save</label>
-      <input v-model="dexSave" type="number" name="dex-save" value="" min="0" max="10">
+      <input required v-model="dexSave" type="number" name="dex-save" value="" min="0" max="10">
       <label for="con-save">CON Save</label>
-      <input v-model="conSave" type="number" name="con-save" value="" min="0" max="10">
+      <input required v-model="conSave" type="number" name="con-save" value="" min="0" max="10">
       <label for="int-save">INT Save</label>
-      <input v-model="intSave" type="number" name="int-save" value="" min="0" max="10">
+      <input required v-model="intSave" type="number" name="int-save" value="" min="0" max="10">
       <label for="wis-save">WIS Save</label>
-      <input v-model="wisSave" type="number" name="wis-save" value="" min="0" max="10">
+      <input required v-model="wisSave" type="number" name="wis-save" value="" min="0" max="10">
       <label for="cha-save">CHA Save</label>
-      <input v-model="chaSave" type="number" name="cha-save" value="" min="0" max="10">
+      <input required v-model="chaSave" type="number" name="cha-save" value="" min="0" max="10">
 
       <br/>
 
@@ -183,21 +180,47 @@ add description -->
       <div class="languages-container">
         <span v-for="language in languages"
         @click="removeLanguage(language)">
-
           {{language}}
-
           <br/>
-
         </span>
       </div>
 
       <br/>
 
-      <label for="challenge-rating">Challenge Rating (select dropdown in order to get the 1/8 and stuff)</label>
-      <input v-model="challengeRating"
-      type="number"
-      name="challenge-rating"
-      value="">
+      <!-- Challenge Rating -->
+      <label for="challenge-rating">Challenge Rating</label>
+      <select v-model="challengeRating" name="challenge-rating">
+        <option value="0">0</option>
+        <option value="0.125">1/8</option>
+        <option value="0.25">1/4</option>
+        <option value="0.5">1/2</option>
+        <option v-for="i in Array(30).keys()" :value="i + 1">{{i + 1}}</option>
+      </select>
+
+      <br/>
+
+      <!-- Environments Form -->
+      <form @submit="addEnvironment" class="environments-form">
+        <label for="environment-name">Add Environment</label>
+        <input v-model="environmentName" type="text" name="environment-name" value="">
+        <input type="submit" name="environment-form-submit" value="Submit">
+      </form>
+
+      <br/>
+
+      <!-- Current Environments -->
+      <div class="environments-container">
+        <span v-for="environment in environments"
+        @click="removeEnvironment(environment)">
+          {{environment}}
+          <br/>
+        </span>
+      </div>
+
+      <br/>
+
+      <label for="description">Description</label>
+      <input required v-model="description" type="text" name="description" value="">
 
       <br/>
 
@@ -228,7 +251,6 @@ export default {
       swimSpeed: 15,
       flyingSpeed: 0,
       burrowingSpeed: 0,
-      challengeRating: 0,
       str: 10,
       dex: 10,
       con: 10,
@@ -241,6 +263,8 @@ export default {
       intSave: 0,
       wisSave: 0,
       chaSave: 0,
+      challengeRating: '0',
+      description: '',
       // skills
       skills: [],
       skillName: '',
@@ -248,7 +272,10 @@ export default {
       skillAttr: 'str',
       // languages
       languages: [],
-      languageName: ''
+      languageName: '',
+      // environments
+      environments: [],
+      environmentName: '',
     }
   },
 
@@ -292,11 +319,24 @@ export default {
       e.preventDefault()
       if (!this.languages.includes(this.languageName)) {
         this.languages.push(this.languageName)
+        this.languageName = ''
       }
     },
 
     removeLanguage(language) {
       this.languages = this.languages.filter(l => l !== language)
+    },
+
+    addEnvironment(e) {
+      e.preventDefault()
+      if (!this.environments.includes(this.environmentName)) {
+        this.environments.push(this.environmentName)
+        this.environmentName = ''
+      }
+    },
+
+    removeEnvironment(environment) {
+      this.environments = this.environments.filter(l => l !== environment)
     }
   }
 }
