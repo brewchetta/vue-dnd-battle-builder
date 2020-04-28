@@ -1,7 +1,6 @@
 <template lang="html">
 
   <div class="monster-encounter">
-    <p>Encounter</p>
     <MonsterEncounterCard v-for="monster in currentEncounter.monsters" :monster="monster" />
   </div>
 
@@ -30,6 +29,8 @@ export default {
 <style lang="css" scoped>
   .monster-encounter {
     border: solid black 2px;
-    width: 50%;
+    width: 80%;
+    margin: 10%;
+    min-height: 50vh;
   }
 </style>

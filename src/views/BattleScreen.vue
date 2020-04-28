@@ -5,8 +5,7 @@
   <!-- interface to add cards -->
 
 <template lang="html">
-  <div>
-    <h1>Battle Screen</h1>
+  <div id="battle-screen">
     <MonsterEncounter />
     <MonsterSelector />
   </div>
@@ -28,4 +27,8 @@ export default {
 </script>
 
 <style lang="css" scoped>
+  #battle-screen {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 </style>

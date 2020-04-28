@@ -30,7 +30,6 @@ export default {
       this.$store.dispatch('removeMonster', this.monster.idTag)
     },
     alterHitPoints(currentHP) {
-      console.log(currentHP)
       this.$store.dispatch('alterMonster', {idTag: this.monster.idTag, currentHP})
     },
   }
@@ -39,6 +38,6 @@ export default {
 
 <style lang="css" scoped>
   .monster-encounter-card {
-    border: solid black 2px
+    border: solid black 2px;
   }
 </style>

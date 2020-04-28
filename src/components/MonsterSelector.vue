@@ -85,6 +85,6 @@ export default {
 
 <style lang="css" scoped>
   .monster-selector {
-    width: 50%;
+    width: 80%;
   }
 </style>
