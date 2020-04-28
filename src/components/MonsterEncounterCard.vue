@@ -1,10 +1,16 @@
 <template lang="html">
   <div class="monster-encounter-card">
-    <p>Name: {{monster.name}} | {{hitPoints}} HP | {{monster.armorClass}} AC</p>
+
+    <p>Name: {{monster.name}} | {{monster.currentHP}} HP | {{monster.armorClass}} AC</p>
     <div v-if="expanded" class="monster-encounter-card-expanded">
       <p>Challenge Rating: {{monster.challengeRating}}</p>
       <p>Alignment: {{monster.alignmentLaw}}law {{monster.alignmentMoral}}moral</p>
     </div>
+    <button type="button" name="subtract-hitpoint-button" @click="alterHitPoints">-1</button>
+    <button type="button" name="subtract-hitpoint-button" @click="alterHitPoints(monster.currentHP + 1)">+1</button>
+
+    <button type="button" name="remove-monster-button" @click="removeMonster">--</button>
+
   </div>
 </template>
 
@@ -13,13 +19,20 @@ export default {
   name: 'MonsterEncounterCard',
   data() {
     return {
-      hitPoints: this.monster.hitPoints,
-      conditions: [],
       expanded: false
     }
-  }
+  },
   props: {
     monster: Object
+  },
+  methods: {
+    removeMonster() {
+      this.$store.dispatch('removeMonster', this.monster.idTag)
+    },
+    alterHitPoints(currentHP = this.monster.currentHP - 1) {
+      // this will default to subtracting one hit point
+      this.$store.dispatch('alterMonster', {idTag: this.monster.idTag, currentHP})
+    },
   }
 }
 </script>

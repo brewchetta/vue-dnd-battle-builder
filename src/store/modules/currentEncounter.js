@@ -9,7 +9,8 @@ export const mutations = {
 
   ADD_MONSTER(state, monster) {
     const m = {...monster}
-    m.idTag = state.idTag++
+    state.idTag++
+    m.idTag = state.idTag
     m.currentHP = m.hitPoints
     m.conditions = []
     // add initiative?
@@ -22,8 +23,10 @@ export const mutations = {
   REMOVE_MONSTER(state, payload) {
     if (typeof payload === "object") {
       delete state.monsters[payload.idTag]
+      state.monsters = {...state.monsters}
     } else if (typeof payload === "number") {
       delete state.monsters[payload]
+      state.monsters = {...state.monsters}
     }
   },
 

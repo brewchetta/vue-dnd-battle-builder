@@ -2,20 +2,26 @@
 
   <div class="monster-encounter">
     <p>Encounter</p>
-    <p v-for="m in currentEncounter.monsters">{{m.name}}</p>
+    <MonsterEncounterCard v-for="monster in currentEncounter.monsters" :monster="monster" />
   </div>
 
 </template>
 
 <script>
+import MonsterEncounterCard from './MonsterEncounterCard'
+
 export default {
 
   name: 'MonsterEncounter',
+
   computed: {
     currentEncounter() {
-      console.log('firing')
       return this.$store.state.currentEncounter
     }
+  },
+
+  components: {
+    MonsterEncounterCard
   }
 
 }
