@@ -6,17 +6,16 @@
 <!-- this should be used when building or editing a monster -->
 
 <!--
-
-skills (write in? or addable?)
 languages (allow for multiple)
 challenge (xp derived from challenge)
 environment (multiple allowed)
-add actions -->
+add actions
+add description -->
 
 <template lang="html">
   <div class="enemy-builder-main">
 
-    <h1>Enemy Builder (Main View)</h1>
+    <h1>Monster Builder</h1>
 
     <form @submit="handleSubmit">
 
@@ -171,6 +170,27 @@ add actions -->
         </span>
       </div>
 
+      <!-- Languages Form -->
+      <form @submit="addLanguage" class="languages-form">
+        <label for="language-name">Add Language</label>
+        <input v-model="languageName" type="text" name="language-name" value="">
+        <input type="submit" name="language-form-submit" value="Submit">
+      </form>
+
+      <br/>
+
+      <!-- Current Languages -->
+      <div class="languages-container">
+        <span v-for="language in languages"
+        @click="removeLanguage(language)">
+
+          {{language}}
+
+          <br/>
+
+        </span>
+      </div>
+
       <br/>
 
       <label for="challenge-rating">Challenge Rating (select dropdown in order to get the 1/8 and stuff)</label>
@@ -196,9 +216,6 @@ export default {
 
   data() {
     return {
-      skillName: '',
-      skillBonus: 1,
-      skillAttr: 'str',
       id: 0,
       name: "",
       size: 2,
@@ -224,8 +241,14 @@ export default {
       intSave: 0,
       wisSave: 0,
       chaSave: 0,
-      skills: []
-      // abilities ought to be a seperate set of components created by an array here
+      // skills
+      skills: [],
+      skillName: '',
+      skillBonus: 1,
+      skillAttr: 'str',
+      // languages
+      languages: [],
+      languageName: ''
     }
   },
 
@@ -263,6 +286,17 @@ export default {
 
     removeSkill(skill) {
       this.skills = this.skills.filter(s => s !== skill)
+    },
+
+    addLanguage(e) {
+      e.preventDefault()
+      if (!this.languages.includes(this.languageName)) {
+        this.languages.push(this.languageName)
+      }
+    },
+
+    removeLanguage(language) {
+      this.languages = this.languages.filter(l => l !== language)
     }
   }
 }
