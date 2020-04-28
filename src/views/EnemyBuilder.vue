@@ -104,7 +104,7 @@ export default {
       } else {
         m.id = id
         fetchService.patchMonster(m)
-        .then(console.log)
+        .then(() => this.$store.dispatch('editMatchingMonsters', m))
       }
     }
   }

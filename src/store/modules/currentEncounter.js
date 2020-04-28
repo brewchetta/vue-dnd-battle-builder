@@ -36,6 +36,16 @@ export const mutations = {
     if (m) {
       Object.keys(changes).forEach(key => m[key] = changes[key])
     }
+  },
+
+  // updates all available encounter monsters once a monster entry has been edited
+  EDIT_MATCHING_MONSTERS(state, editedMonster) {
+    Object.values(state.monsters).forEach(monster => {
+      if (monster.id === editedMonster.id) {
+        Object.keys(monster).forEach(key => monster[key] = editedMonster[key])
+      }
+    })
+    state.monsters = {...state.monsters}
   }
 }
 
@@ -49,5 +59,8 @@ export const actions = {
   },
   alterMonster({commit, state, rootState}, changes) {
     commit('ALTER_MONSTER', changes)
+  },
+  editMatchingMonsters({commit, state, rootState}, monster) {
+    commit('EDIT_MATCHING_MONSTERS', monster)
   }
 }
