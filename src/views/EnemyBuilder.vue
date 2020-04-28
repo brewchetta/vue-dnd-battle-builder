@@ -5,21 +5,12 @@
   <!-- in future versions this should auto-add a CR -->
 <!-- this should be used when building or editing a monster -->
 
-<!-- Name
-size
-monster type (aberration etc)
-alignment
-armor class
-hit points
-speed
-swim speed (optional)
-fly speed (optional)
-burrowing speed (optional)
-str dex con cha wis int
-saving throws str dex con cha wis int (optional)
+<!--
+
 skills (write in? or addable?)
 languages (allow for multiple)
 challenge (xp derived from challenge)
+environment (multiple allowed)
 add actions -->
 
 <template lang="html">
@@ -29,7 +20,8 @@ add actions -->
 
     <form @submit="handleSubmit">
 
-      <label>Name</label>
+      <!-- Name -->
+      <label for="name">Name</label>
       <input v-model="name"
       type="text"
       name="name"
@@ -37,7 +29,44 @@ add actions -->
 
       <br/>
 
-      <label>Alignment</label>
+      <!-- Size -->
+      <label for="size">Size</label>
+      <select v-model="size"
+      name="size">
+        <option value="0">Tiny</option>
+        <option value="1">Small</option>
+        <option value="2">Medium</option>
+        <option value="3">Large</option>
+        <option value="4">Huge</option>
+        <option value="5">Gargantuan</option>
+      </select>
+
+      <br/>
+
+      <!-- Type -->
+      <label for="monster-type">Monster Type</label>
+      <select v-model="monsterType"
+      name="monster-type">
+        <option value="aberration">Aberration</option>
+        <option value="beast">Beast</option>
+        <option value="celestial">Celestial</option>
+        <option value="construct">Construct</option>
+        <option value="dragon">Dragon</option>
+        <option value="elemental">Elemental</option>
+        <option value="fey">Fey</option>
+        <option value="fiend">Fiend</option>
+        <option value="giant">Giant</option>
+        <option value="humanoid">Humanoid</option>
+        <option value="monstrosity">Monstrosity</option>
+        <option value="ooze">Ooze</option>
+        <option value="plant">Plant</option>
+        <option value="undead">Undead</option>
+      </select>
+
+      <br/>
+
+      <!-- Alignment -->
+      <label for="alignment-lawful">Alignment</label>
       <select v-model="alignmentLaw"
       name="alignment-lawful">
         <option value="1">Lawful</option>
@@ -53,15 +82,9 @@ add actions -->
 
       <br/>
 
-      <label>Challenge Rating (select dropdown in order to get the 1/8 and stuff)</label>
-      <input v-model="challengeRating"
-      type="number"
-      name="challenge-rating"
-      value="">
 
-      <br/>
-
-      <label>Armor Class (number)</label>
+      <!-- Armor Class -->
+      <label for="armor-class">Armor Class (number)</label>
       <input v-model="armorClass"
       type="number"
       name="armor-class"
@@ -69,11 +92,94 @@ add actions -->
 
       <br/>
 
-      <label>Hit Points (number)</label>
+      <!-- Hit Points -->
+      <label>Hit Points</label>
       <input v-model="hitPoints"
       type="number"
       name="hit-points"
       value="">
+
+      <br/>
+
+      <!-- Speed -->
+      <label for="speed">Speed</label>
+      <input v-model="speed" type="number" name="speed" value="" step="5" min="0">
+      <label for="swim-speed">Swim Speed</label>
+      <input v-model="swimSpeed" type="number" name="speed" value="" step="5" min="0">
+      <label for="fly-speed">Fly Speed</label>
+      <input v-model="flyingSpeed" type="number" name="speed" value="" step="5" min="0">
+      <label for="burrowing-speed">Burrowing Speed</label>
+      <input v-model="burrowingSpeed" type="number" name="speed" value="" step="5" min="0">
+
+      <br/>
+
+      <!-- Attributes -->
+      <label for="str">STR</label>
+      <input v-model="str" type="number" name="str" value="" min="0" max="30">
+      <label for="dex">DEX</label>
+      <input v-model="dex" type="number" name="dex" value="" min="0" max="30">
+      <label for="con">CON</label>
+      <input v-model="con" type="number" name="con" value="" min="0" max="30">
+      <label for="int">INT</label>
+      <input v-model="int" type="number" name="int" value="" min="0" max="30">
+      <label for="wis">WIS</label>
+      <input v-model="wis" type="number" name="wis" value="" min="0" max="30">
+      <label for="cha">CHA</label>
+      <input v-model="cha" type="number" name="cha" value="" min="0" max="30">
+
+      <br/>
+
+      <!-- Saving Throws -->
+      <label for="str-save">STR Save</label>
+      <input v-model="strSave" type="number" name="str-save" value="" min="0" max="10">
+      <label for="dex-save">DEX Save</label>
+      <input v-model="dexSave" type="number" name="dex-save" value="" min="0" max="10">
+      <label for="con-save">CON Save</label>
+      <input v-model="conSave" type="number" name="con-save" value="" min="0" max="10">
+      <label for="int-save">INT Save</label>
+      <input v-model="intSave" type="number" name="int-save" value="" min="0" max="10">
+      <label for="wis-save">WIS Save</label>
+      <input v-model="wisSave" type="number" name="wis-save" value="" min="0" max="10">
+      <label for="cha-save">CHA Save</label>
+      <input v-model="chaSave" type="number" name="cha-save" value="" min="0" max="10">
+
+      <br/>
+
+      <!-- Skills Form -->
+      <form @submit="addSkill" class="skills-form">
+        <label for="skill-name">Add Skill</label>
+        <input v-model="skillName" type="text" name="skill-name" value="">
+        <select v-model="skillAttr" name="skill-attr">
+          <option v-for="attr in ['str','dex','con','int','wis','cha']" :value="attr">{{attr.toUpperCase()}}</option>
+          <option value=""></option>
+        </select>
+        <input v-model="skillBonus" type="number" name="skill-bonus" value="">
+        <input type="submit" name="skill-form-submit" value="Submit">
+      </form>
+
+      <br/>
+
+      <!-- Current Skills -->
+      <div class="skills-container">
+        <span v-for="skill in skills"
+        @click="removeSkill(skill)">
+
+          {{skill.name}}({{skill.attr}}) {{skill.bonus >= 0 ? "+" : null}}{{skill.bonus}}
+
+          <br/>
+
+        </span>
+      </div>
+
+      <br/>
+
+      <label for="challenge-rating">Challenge Rating (select dropdown in order to get the 1/8 and stuff)</label>
+      <input v-model="challengeRating"
+      type="number"
+      name="challenge-rating"
+      value="">
+
+      <br/>
 
       <input type="submit" name="submit" value="Submit">
 
@@ -90,13 +196,35 @@ export default {
 
   data() {
     return {
+      skillName: '',
+      skillBonus: 1,
+      skillAttr: 'str',
       id: 0,
       name: "",
+      size: 2,
+      monsterType: "humanoid",
       alignmentMoral: 1,
       alignmentLaw: 1,
-      challengeRating: "0",
       armorClass: 10,
-      hitPoints: 10
+      hitPoints: 10,
+      speed: 30,
+      swimSpeed: 15,
+      flyingSpeed: 0,
+      burrowingSpeed: 0,
+      challengeRating: 0,
+      str: 10,
+      dex: 10,
+      con: 10,
+      int: 10,
+      wis: 10,
+      cha: 10,
+      strSave: 0,
+      dexSave: 0,
+      conSave: 0,
+      intSave: 0,
+      wisSave: 0,
+      chaSave: 0,
+      skills: []
       // abilities ought to be a seperate set of components created by an array here
     }
   },
@@ -106,13 +234,7 @@ export default {
     if (this.$route.params.monsterId) {
       fetchService.monster(this.$route.params.monsterId)
       .then(m => {
-        this.name = m.name
-        this.alignmentMoral = m.alignmentMoral
-        this.alignmentLaw = m.alignmentLaw
-        this.challengeRating = m.challengeRating
-        this.armorClass = m.armorClass
-        this.hitPoints = m.hitPoints
-        this.id = m.id
+        Object.keys(m).forEach(key => this[key] = m[key])
       })
     }
   },
@@ -131,10 +253,20 @@ export default {
         fetchService.patchMonster(m)
         .then(() => this.$store.dispatch('editMatchingMonsters', m))
       }
+    },
+
+    addSkill(e) {
+      e.preventDefault()
+      this.skills = this.skills.filter(s => s.name !== this.skillName)
+      this.skills.push({name: this.skillName, attr: this.skillAttr, bonus: this.skillBonus})
+    },
+
+    removeSkill(skill) {
+      this.skills = this.skills.filter(s => s !== skill)
     }
   }
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
 </style>

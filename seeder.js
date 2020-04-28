@@ -23,14 +23,20 @@ for (i = 1; i < 100; i++) {
 
   monster = {
     name: `${adjectives[Math.floor(Math.random() * adjectives.length)]} ${monsterTypes[Math.floor(Math.random() * monsterTypes.length)]}`,
+    size: Math.floor(Math.random() * 4),
+    monsterType: 'beast',
     armorClass: Math.floor(Math.random() * 10 + 10),
-    challengeRating: Math.ceil(Math.random() * 6),
     alignmentMoral: Math.ceil(Math.random() * 3),
     alignmentLaw: Math.ceil(Math.random() * 3),
-    hitPoints: Math.ceil(Math.random() * 30)
+    hitPoints: Math.ceil(Math.random() * 30),
+    speed: 30,
+    swimSpeed: 15,
+    flyingSpeed: 0,
+    burrowingSpeed: 0,
+    challengeRating: Math.ceil(Math.random() * 6)
   }
 
-  fileArray.push(`\n{\n "id":${i},\n "name": "${monster.name}",\n "armorClass": "${monster.armorClass}",\n "challengeRating": "${monster.challengeRating}",\n "alignmentMoral": "${monster.alignmentMoral}",\n "alignmentLaw": "${monster.alignmentLaw}",\n "hitPoints": "${monster.hitPoints}"\n}`)
+  fileArray.push(`\n{\n "id":${i},\n "name": "${monster.name}",\n "size": "${monster.size}",\n "monsterType": "${monster.monsterType}",\n "armorClass": "${monster.armorClass}",\n "challengeRating": "${monster.challengeRating}",\n "alignmentMoral": "${monster.alignmentMoral}",\n "alignmentLaw": "${monster.alignmentLaw}",\n "hitPoints": "${monster.hitPoints}",\n "speed": "${monster.speed}",\n "swimSpeed": "${monster.swimSpeed}",\n "flyingSpeed": "${monster.flyingSpeed}",\n "burrowingSpeed": "${monster.burrowingSpeed}"\n}`)
 
 } // end loop
 
