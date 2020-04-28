@@ -16,8 +16,13 @@ import MonsterSelector from '@/components/MonsterSelector'
 
 export default {
   name: 'BattleScreen',
+
   components: {
     MonsterSelector
+  },
+
+  created() {
+    console.log(this.$store.state.currentEncounter.monsters)
   }
 }
 </script>
