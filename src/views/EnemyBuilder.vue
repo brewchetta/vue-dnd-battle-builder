@@ -5,6 +5,23 @@
   <!-- in future versions this should auto-add a CR -->
 <!-- this should be used when building or editing a monster -->
 
+<!-- Name
+size
+monster type (aberration etc)
+alignment
+armor class
+hit points
+speed
+swim speed (optional)
+fly speed (optional)
+burrowing speed (optional)
+str dex con cha wis int
+saving throws str dex con cha wis int (optional)
+skills (write in? or addable?)
+languages (allow for multiple)
+challenge (xp derived from challenge)
+add actions -->
+
 <template lang="html">
   <div class="enemy-builder-main">
 
@@ -20,11 +37,19 @@
 
       <br/>
 
-      <label>Alignment (switch to two radio buttons?)</label>
-      <input v-model="alignmentMoral"
-      type="number"
-      name="alignment"
-      value="">
+      <label>Alignment</label>
+      <select v-model="alignmentLaw"
+      name="alignment-lawful">
+        <option value="1">Lawful</option>
+        <option value="2">True</option>
+        <option value="3">Chaotic</option>
+      </select>
+      <select v-model="alignmentMoral"
+      name="alignment-moral">
+        <option value="1">Good</option>
+        <option value="2">Neutral</option>
+        <option value="3">Evil</option>
+      </select>
 
       <br/>
 
