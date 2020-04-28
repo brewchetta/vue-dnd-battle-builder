@@ -4,7 +4,7 @@
     <p @click="toggleExpand">Name: {{monster.name}} | {{monster.currentHP}} HP | {{monster.armorClass}} AC</p>
     <div v-if="expanded" class="monster-encounter-card-expanded">
       <p>Challenge Rating: {{monster.challengeRating}}</p>
-      <p>Alignment: {{monster.alignmentLaw}}law {{monster.alignmentMoral}}moral</p>
+      <p>Alignment: {{alignment}}</p>
     </div>
     <button type="button" name="subtract-hitpoint-button" @click="alterHitPoints(monster.currentHP - 1)">-1</button>
     <button type="button" name="subtract-hitpoint-button" @click="alterHitPoints(monster.currentHP + 1)">+1</button>
@@ -34,6 +34,20 @@ export default {
     },
     toggleExpand() {
       this.expanded = !this.expanded
+    }
+  },
+  computed: {
+    alignment() {
+      const {alignmentLaw, alignmentMoral} = this.monster
+      let law
+      alignmentLaw === "1" ? law = 'Lawful' :
+      alignmentLaw === "2" ? law = 'True' :
+        law = 'Chaotic'
+      let moral
+      alignmentMoral === "1" ? moral = 'Good' :
+      alignmentMoral === "2" ? moral = 'Neutral' :
+        moral = 'Evil'
+      return `${law} ${moral}`
     }
   }
 }
