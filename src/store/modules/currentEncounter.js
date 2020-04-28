@@ -2,33 +2,34 @@
 export const state = {
   // be aware the monsters is a hash with key matching a monster's id
   monsters: {},
-  idIterator: 0
+  idTag: 0
 }
 
 export const mutations = {
 
   ADD_MONSTER(state, monster) {
     const m = {...monster}
-    m.id = idIterator ++
+    m.idTag = state.idTag++
     m.currentHP = m.hitPoints
     m.conditions = []
     // add initiative?
     // m.init = Math.ceil(Math.random() * 20) + m.dex
-    state.monster[idIterator] = m
+    // state needs to be duplicated in order to avoid a reactivity bug
+    state.monsters = {...state.monsters, [state.idTag]: m}
   },
 
   // added remove monster takes either an id or a monster object
   REMOVE_MONSTER(state, payload) {
     if (typeof payload === "object") {
-      delete state.monsters[payload.id]
+      delete state.monsters[payload.idTag]
     } else if (typeof payload === "number") {
       delete state.monsters[payload]
     }
   },
 
-  // in order for alter monster to work it must be passed an object with changes including an id for the corresponding monster
+  // in order for alter monster to work it must be passed an object with changes including an idTag for the corresponding monster
   ALTER_MONSTER(state, changes) {
-    const m = state.monsters.find(monster => monster.id === changes.id)
+    const m = state.monsters.find(monster => monster.idTag === changes.idTag)
     if (m) {
       Object.keys(changes).forEach(key => m[key] = changes[key])
     }

@@ -7,23 +7,23 @@
 <template lang="html">
   <div>
     <h1>Battle Screen</h1>
+    <MonsterEncounter />
     <MonsterSelector />
   </div>
 </template>
 
 <script>
+import MonsterEncounter from '@/components/MonsterEncounter'
 import MonsterSelector from '@/components/MonsterSelector'
 
 export default {
   name: 'BattleScreen',
 
   components: {
+    MonsterEncounter,
     MonsterSelector
-  },
-
-  created() {
-    console.log(this.$store.state.currentEncounter.monsters)
   }
+
 }
 </script>
 

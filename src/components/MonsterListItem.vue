@@ -4,7 +4,7 @@
 
   <div class="monster-list-item">
 
-      <p><span @click="handleClick">{{monster.name}} | {{monster.armorClass}} AC | {{monster.challengeRating}} CR</span> <button v-if="selectable">+</button></p>
+      <p><span @click="handleClick">{{monster.name}} | {{monster.armorClass}} AC | {{monster.challengeRating}} CR</span> <button v-if="selectable" @click="handleAddMonster">+</button></p>
 
       <MonsterListCard v-if="showCard" :monster="monster" />
 
@@ -24,6 +24,9 @@ export default {
   methods: {
     handleClick() {
       this.$emit('toggle-monster-card', this.monster.id)
+    },
+    handleAddMonster() {
+      this.$store.dispatch('addMonster', this.monster)
     }
   },
   components: {
