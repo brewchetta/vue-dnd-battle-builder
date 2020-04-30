@@ -22,3 +22,4 @@ Current Phase:
 
 - persisting monsters and retrieving them
 - adding abilities to monsters
+- refactoring component hierarchy
