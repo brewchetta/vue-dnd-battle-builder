@@ -33,6 +33,7 @@ export default {
     handleSubmit(e) {
       e.preventDefault()
       this.$emit(`add-${this.formName}`, {...this.formState})
+      this.formState = {...this.formFields}
     }
   },
   computed: {

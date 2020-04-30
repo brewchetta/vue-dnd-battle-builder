@@ -223,11 +223,14 @@ break environment / language / skills / senses into their own component
       <br/>
 
       <!-- Environments Form -->
-      <form @submit="addEnvironment" class="environments-form">
+      <!-- <form @submit="addEnvironment" class="environments-form">
         <label for="environment-name">Add Environment</label>
         <input v-model="environmentName" type="text" name="environment-name" value="">
         <input type="submit" name="environment-form-submit" value="Submit">
-      </form>
+      </form> -->
+      <MonsterAttrListForm :formName="'environment'"
+      :formFields="{name: ''}"
+      @add-environment="addEnvironment" />
 
       <br/>
 
@@ -247,8 +250,6 @@ break environment / language / skills / senses into their own component
       <input required v-model="description" type="text" name="description" value="">
 
       <br/>
-
-      <MonsterAttrListForm :formName="'something'" @add-something="addSomething" :formFields="{name: '', id: ''}" />
 
       <input type="submit" name="submit" value="Submit">
 
@@ -370,11 +371,9 @@ export default {
       this.languages = this.languages.filter(l => l !== language)
     },
 
-    addEnvironment(e) {
-      e.preventDefault()
-      if (!this.environments.includes(this.environmentName)) {
-        this.environments.push(this.environmentName)
-        this.environmentName = ''
+    addEnvironment(formData) {
+      if (!this.environments.includes(formData.name)) {
+        this.environments.push(formData.name)
       }
     },
 
@@ -382,9 +381,6 @@ export default {
       this.environments = this.environments.filter(l => l !== environment)
     },
 
-    addSomething(object) {
-      console.log('the object passed up is: ', object)
-    }
   }
 }
 </script>
