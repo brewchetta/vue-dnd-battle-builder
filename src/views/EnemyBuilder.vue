@@ -191,11 +191,15 @@ break environment / language / skills / senses into their own component
       <br/>
 
       <!-- Languages Form -->
-      <form @submit="addLanguage" class="languages-form">
+      <!-- <form @submit="addLanguage" class="languages-form">
         <label for="language-name">Add Language</label>
         <input v-model="languageName" type="text" name="language-name" value="">
         <input type="submit" name="language-form-submit" value="Submit">
-      </form>
+      </form> -->
+      <MonsterAttrListForm
+      :formName="'language'"
+      :formFields="{name: ''}"
+      @add-language="addLanguage"/>
 
       <br/>
 
@@ -228,7 +232,8 @@ break environment / language / skills / senses into their own component
         <input v-model="environmentName" type="text" name="environment-name" value="">
         <input type="submit" name="environment-form-submit" value="Submit">
       </form> -->
-      <MonsterAttrListForm :formName="'environment'"
+      <MonsterAttrListForm
+      :formName="'environment'"
       :formFields="{name: ''}"
       @add-environment="addEnvironment" />
 
@@ -295,21 +300,17 @@ export default {
       chaSave: 0,
       challengeRating: '0',
       description: '',
+      environments: [],
+      languages: [],
       // skills
       skills: [],
       skillName: '',
       skillBonus: 1,
       skillAttr: 'str',
-      // languages
-      languages: [],
-      languageName: '',
       // senses
       senses: [],
       senseName: '',
       senseRange: 60,
-      // environments
-      environments: [],
-      environmentName: '',
     }
   },
 
@@ -359,11 +360,9 @@ export default {
       this.senses = this.senses.filter(s => s !== sense)
     },
 
-    addLanguage(e) {
-      e.preventDefault()
-      if (!this.languages.includes(this.languageName)) {
-        this.languages.push(this.languageName)
-        this.languageName = ''
+    addLanguage(formData) {
+      if (!this.languages.includes(formData.name)) {
+        this.languages.push(formData.name)
       }
     },
 
