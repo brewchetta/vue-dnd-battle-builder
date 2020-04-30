@@ -254,7 +254,7 @@ export default {
         land: 30,
         climb: 0,
         swim: 0,
-        flying: 0,
+        fly: 0,
         burrow: 0
       },
       attributes: {
