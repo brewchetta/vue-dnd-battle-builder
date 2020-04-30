@@ -3,7 +3,16 @@
 
     <label :for="`${formName}-name`">Add {{capitalizedName}}</label>
 
-    <input v-for="attr in Object.keys(formState)" v-model="formState[attr]" type="text" :name="`${formName}-name`" value="">
+    <div v-for="attr in Object.keys(formState)" className="monster-list-form">
+
+      <label v-if="useTags" :for="`${formName}-${attr}`">{{attr[0].toUpperCase() + attr.slice(1)}}</label>
+
+      <input v-model="formState[attr]"
+      :type="typeof formFields[attr] === 'string' ? 'text' : 'number'"
+      :name="`${formName}-${attr}`"
+      value=""></input>
+
+    </div>
 
     <input type="submit" :name="`${formName}-form-submit`" value="Submit">
 
@@ -27,6 +36,10 @@ export default {
     formName: {
       type: String,
       required: true
+    },
+    useTags: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {

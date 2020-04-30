@@ -169,33 +169,31 @@ break environment / language / skills / senses into their own component
 
 
       <!-- Senses Form -->
-      <form @submit="addSense" class="senses-form">
+      <!-- <form @submit="addSense" class="senses-form">
         <label for="sense-name">Add Sense</label>
         <input v-model="senseName" type="text" name="sense-name" value="">
         <input v-model="senseRange" type="number" name="sense-range" value="" step="5">ft
         <input type="submit" name="sense-form-submit" value="Submit">
-      </form>
+      </form> -->
+      <MonsterAttrListForm
+      :formName="'sense'"
+      :formFields="{name: '', range: 0}"
+      :useTags="true"
+      @add-sense="addSense"
+      />
 
       <!-- Current Senses -->
       <div class="senses-container">
         <span v-for="sense in senses"
         @click="removeSense(sense)">
-
           {{sense.name}} ({{sense.range}}ft)
-
           <br/>
-
         </span>
       </div>
 
       <br/>
 
       <!-- Languages Form -->
-      <!-- <form @submit="addLanguage" class="languages-form">
-        <label for="language-name">Add Language</label>
-        <input v-model="languageName" type="text" name="language-name" value="">
-        <input type="submit" name="language-form-submit" value="Submit">
-      </form> -->
       <MonsterAttrListForm
       :formName="'language'"
       :formFields="{name: ''}"
@@ -227,11 +225,6 @@ break environment / language / skills / senses into their own component
       <br/>
 
       <!-- Environments Form -->
-      <!-- <form @submit="addEnvironment" class="environments-form">
-        <label for="environment-name">Add Environment</label>
-        <input v-model="environmentName" type="text" name="environment-name" value="">
-        <input type="submit" name="environment-form-submit" value="Submit">
-      </form> -->
       <MonsterAttrListForm
       :formName="'environment'"
       :formFields="{name: ''}"
@@ -239,7 +232,6 @@ break environment / language / skills / senses into their own component
 
       <br/>
 
-      <!-- Current Environments -->
       <div class="environments-container">
         <span v-for="environment in environments"
         @click="removeEnvironment(environment)">
@@ -300,8 +292,8 @@ export default {
       chaSave: 0,
       challengeRating: '0',
       description: '',
-      environments: [],
       languages: [],
+      environments: [],
       // skills
       skills: [],
       skillName: '',
@@ -350,10 +342,9 @@ export default {
       this.skills = this.skills.filter(s => s !== skill)
     },
 
-    addSense(e) {
-      e.preventDefault()
-      this.senses = this.senses.filter(s => s.name !== this.senseName)
-      this.senses.push({name: this.senseName, range: this.senseRange})
+    addSense(formData) {
+      this.senses = this.senses.filter(s => s.name !== formData.name)
+      this.senses.push({...formData})
     },
 
     removeSense(sense) {
