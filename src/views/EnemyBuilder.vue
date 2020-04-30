@@ -143,38 +143,11 @@ break environment / language / skills / senses into their own component
       <br/>
 
       <!-- Skills Form -->
-      <form @submit="addSkill" class="skills-form">
-        <label for="skill-name">Add Skill</label>
-        <input v-model="skillName" type="text" name="skill-name" value="">
-        <select v-model="skillAttr" name="skill-attr">
-          <option v-for="attr in ['str','dex','con','int','wis','cha']" :value="attr">{{attr.toUpperCase()}}</option>
-          <option value=""></option>
-        </select>
-        <input v-model="skillBonus" type="number" name="skill-bonus" value="">
-        <input type="submit" name="skill-form-submit" value="Submit">
-      </form>
+      <MonsterSkillsListForm
+      :skills="skills"
+      @add-skill="addSkill" />
 
-
-      <!-- Current Skills -->
-      <div class="skills-container">
-        <span v-for="skill in skills"
-        @click="removeSkill(skill)">
-
-          {{skill.name}}({{skill.attr}}) {{skill.bonus >= 0 ? "+" : null}}{{skill.bonus}}
-
-          <br/>
-
-        </span>
-      </div>
-
-
-      <!-- Senses Form -->
-      <!-- <form @submit="addSense" class="senses-form">
-        <label for="sense-name">Add Sense</label>
-        <input v-model="senseName" type="text" name="sense-name" value="">
-        <input v-model="senseRange" type="number" name="sense-range" value="" step="5">ft
-        <input type="submit" name="sense-form-submit" value="Submit">
-      </form> -->
+      <!-- Senses -->
       <MonsterAttrListForm
       :formName="'sense'"
       :formFields="{name: '', range: 0}"
@@ -182,7 +155,6 @@ break environment / language / skills / senses into their own component
       @add-sense="addSense"
       />
 
-      <!-- Current Senses -->
       <div class="senses-container">
         <span v-for="sense in senses"
         @click="removeSense(sense)">
@@ -193,7 +165,7 @@ break environment / language / skills / senses into their own component
 
       <br/>
 
-      <!-- Languages Form -->
+      <!-- Languages -->
       <MonsterAttrListForm
       :formName="'language'"
       :formFields="{name: ''}"
@@ -201,7 +173,6 @@ break environment / language / skills / senses into their own component
 
       <br/>
 
-      <!-- Current Languages -->
       <div class="languages-container">
         <span v-for="language in languages"
         @click="removeLanguage(language)">
@@ -224,7 +195,7 @@ break environment / language / skills / senses into their own component
 
       <br/>
 
-      <!-- Environments Form -->
+      <!-- Environments -->
       <MonsterAttrListForm
       :formName="'environment'"
       :formFields="{name: ''}"
@@ -258,11 +229,13 @@ break environment / language / skills / senses into their own component
 <script>
 import fetchService from '@/fetchService'
 import MonsterAttrListForm from '@/components/MonsterAttrListForm'
+import MonsterSkillsListForm from '@/components/MonsterSkillsListForm'
 
 export default {
   name: 'EnemyBuilderMain',
   components: {
-    MonsterAttrListForm
+    MonsterAttrListForm,
+    MonsterSkillsListForm
   },
   data() {
     return {
@@ -290,15 +263,11 @@ export default {
       intSave: 0,
       wisSave: 0,
       chaSave: 0,
+      skills: [],
       challengeRating: '0',
       description: '',
       languages: [],
       environments: [],
-      // skills
-      skills: [],
-      skillName: '',
-      skillBonus: 1,
-      skillAttr: 'str',
       // senses
       senses: [],
       senseName: '',
@@ -332,10 +301,9 @@ export default {
       }
     },
 
-    addSkill(e) {
-      e.preventDefault()
-      this.skills = this.skills.filter(s => s.name !== this.skillName)
-      this.skills.push({name: this.skillName, attr: this.skillAttr, bonus: this.skillBonus})
+    addSkill(newSkill) {
+      this.skills = this.skills.filter(s => s.name !== newSkill.name)
+      this.skills.push(newSkill)
     },
 
     removeSkill(skill) {
