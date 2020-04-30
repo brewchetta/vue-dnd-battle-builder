@@ -36,7 +36,9 @@ for (i = 1; i < 100; i++) {
     challengeRating: Math.ceil(Math.random() * 6)
   }
 
-  fileArray.push(`\n{\n "id":${i},\n "name": "${monster.name}",\n "size": "${monster.size}",\n "monsterType": "${monster.monsterType}",\n "armorClass": "${monster.armorClass}",\n "challengeRating": "${monster.challengeRating}",\n "alignmentMoral": "${monster.alignmentMoral}",\n "alignmentLaw": "${monster.alignmentLaw}",\n "hitPoints": "${monster.hitPoints}",\n "speed": "${monster.speed}",\n "swimSpeed": "${monster.swimSpeed}",\n "flyingSpeed": "${monster.flyingSpeed}",\n "burrowingSpeed": "${monster.burrowingSpeed}"\n}`)
+  fileArray.push(`\n{\n "id": ${i},`)
+  Object.keys(monster).forEach(k => fileArray.push(`\n  "${k}": "${monster[k]}",`))
+  fileArray.push('\n "madeBy": "brewchetta"\n}')
 
 } // end loop
 

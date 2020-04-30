@@ -99,30 +99,32 @@ break environment / language / skills / senses into their own component
       <br/>
 
       <!-- Speed -->
-      <label for="speed">Speed</label>
-      <input required v-model="speed" type="number" name="speed" value="" step="5" min="0">
+      <label for="land-speed">Speed</label>
+      <input required v-model="speed.land" type="number" name="land-speed" step="5" min="0">
+      <label for="climb-speed">Climbing Speed</label>
+      <input required v-model="speed.climb" type="number" name="climb-speed" step="5" min="0">
       <label for="swim-speed">Swim Speed</label>
-      <input required v-model="swimSpeed" type="number" name="speed" value="" step="5" min="0">
+      <input required v-model="speed.swim" type="number" name="swim-speed" step="5" min="0">
       <label for="fly-speed">Fly Speed</label>
-      <input required v-model="flyingSpeed" type="number" name="speed" value="" step="5" min="0">
+      <input required v-model="speed.flying" type="number" name="flying-speed" step="5" min="0">
       <label for="burrowing-speed">Burrowing Speed</label>
-      <input required v-model="burrowingSpeed" type="number" name="speed" value="" step="5" min="0">
+      <input required v-model="speed.burrow" type="number" name="burrow-speed" step="5" min="0">
 
       <br/>
 
       <!-- Attributes -->
       <label for="str">STR</label>
-      <input required v-model="str" type="number" name="str" value="" min="0" max="30">
+      <input required v-model="attributes.str" type="number" name="str" value="" min="0" max="30">
       <label for="dex">DEX</label>
-      <input required v-model="dex" type="number" name="dex" value="" min="0" max="30">
+      <input required v-model="attributes.dex" type="number" name="dex" value="" min="0" max="30">
       <label for="con">CON</label>
-      <input required v-model="con" type="number" name="con" value="" min="0" max="30">
+      <input required v-model="attributes.con" type="number" name="con" value="" min="0" max="30">
       <label for="int">INT</label>
-      <input required v-model="int" type="number" name="int" value="" min="0" max="30">
+      <input required v-model="attributes.int" type="number" name="int" value="" min="0" max="30">
       <label for="wis">WIS</label>
-      <input required v-model="wis" type="number" name="wis" value="" min="0" max="30">
+      <input required v-model="attributes.wis" type="number" name="wis" value="" min="0" max="30">
       <label for="cha">CHA</label>
-      <input required v-model="cha" type="number" name="cha" value="" min="0" max="30">
+      <input required v-model="attributes.cha" type="number" name="cha" value="" min="0" max="30">
 
       <br/>
 
@@ -248,32 +250,28 @@ export default {
       alignmentLaw: 1,
       armorClass: 10,
       hitPoints: 10,
-      speed: 30,
-      swimSpeed: 15,
-      flyingSpeed: 0,
-      burrowingSpeed: 0,
-      str: 10,
-      dex: 10,
-      con: 10,
-      int: 10,
-      wis: 10,
-      cha: 10,
+      speed: {
+        land: 30,
+        climb: 0,
+        swim: 0,
+        flying: 0,
+        burrow: 0
+      },
+      attributes: {
+        str: 10,
+        dex: 10,
+        con: 10,
+        int: 10,
+        wis: 10,
+        cha: 10,
+      },
       saves: {},
-      strSave: 0,
-      dexSave: 0,
-      conSave: 0,
-      intSave: 0,
-      wisSave: 0,
-      chaSave: 0,
+      senses: [],
       skills: [],
       challengeRating: '0',
       description: '',
       languages: [],
       environments: [],
-      // senses
-      senses: [],
-      senseName: '',
-      senseRange: 60,
     }
   },
 
