@@ -126,21 +126,22 @@ break environment / language / skills / senses into their own component
 
       <br/>
 
-      <!-- Saving Throws -->
-      <label for="str-save">STR Save</label>
-      <input required v-model="strSave" type="number" name="str-save" value="" min="0" max="10">
-      <label for="dex-save">DEX Save</label>
-      <input required v-model="dexSave" type="number" name="dex-save" value="" min="0" max="10">
-      <label for="con-save">CON Save</label>
-      <input required v-model="conSave" type="number" name="con-save" value="" min="0" max="10">
-      <label for="int-save">INT Save</label>
-      <input required v-model="intSave" type="number" name="int-save" value="" min="0" max="10">
-      <label for="wis-save">WIS Save</label>
-      <input required v-model="wisSave" type="number" name="wis-save" value="" min="0" max="10">
-      <label for="cha-save">CHA Save</label>
-      <input required v-model="chaSave" type="number" name="cha-save" value="" min="0" max="10">
+      <!-- Saves -->
+      <MonsterAttrListForm
+      :formName="'save'"
+      :formFields="{attribute: 'str', bonus: 0}"
+      @add-save="addSave" />
 
       <br/>
+
+      <div class="save-container">
+        <span v-for="s in Object.keys(saves)"
+        @click="removeSave(s)">
+          {{s.toUpperCase()}}[{{saves[s] > 0 ? '+' : null}}{{saves[s]}}]
+          <br/>
+        </span>
+      </div>
+
 
       <!-- Skills Form -->
       <MonsterSkillsListForm
@@ -257,6 +258,7 @@ export default {
       int: 10,
       wis: 10,
       cha: 10,
+      saves: {},
       strSave: 0,
       dexSave: 0,
       conSave: 0,
@@ -286,6 +288,7 @@ export default {
   },
 
   methods: {
+
     handleSubmit(e) {
       e.preventDefault()
       const {name, alignmentMoral, alignmentLaw, challengeRating, armorClass, hitPoints, id} = this
@@ -299,6 +302,15 @@ export default {
         fetchService.patchMonster(m)
         .then(() => this.$store.dispatch('editMatchingMonsters', m))
       }
+    },
+
+    addSave(newSave) {
+      this.saves[newSave.attribute] = newSave.bonus
+      this.saves = {...this.saves}
+    },
+
+    removeSave(saveName) {
+      this.saves[saveName] = false
     },
 
     addSkill(newSkill) {
