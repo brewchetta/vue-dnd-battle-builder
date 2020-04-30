@@ -5,9 +5,10 @@
   <!-- in future versions this should auto-add a CR -->
 <!-- this should be used when building or editing a monster -->
 
-<!--
+<!-- TODO:
 add actions
-add description -->
+break environment / language / skills / senses into their own component
+-->
 
 <template lang="html">
   <div class="enemy-builder-main">
@@ -153,7 +154,6 @@ add description -->
         <input type="submit" name="skill-form-submit" value="Submit">
       </form>
 
-      <br/>
 
       <!-- Current Skills -->
       <div class="skills-container">
@@ -166,6 +166,29 @@ add description -->
 
         </span>
       </div>
+
+
+      <!-- Senses Form -->
+      <form @submit="addSense" class="senses-form">
+        <label for="sense-name">Add Sense</label>
+        <input v-model="senseName" type="text" name="sense-name" value="">
+        <input v-model="senseRange" type="number" name="sense-range" value="" step="5">ft
+        <input type="submit" name="sense-form-submit" value="Submit">
+      </form>
+
+      <!-- Current Senses -->
+      <div class="senses-container">
+        <span v-for="sense in senses"
+        @click="removeSense(sense)">
+
+          {{sense.name}} ({{sense.range}}ft)
+
+          <br/>
+
+        </span>
+      </div>
+
+      <br/>
 
       <!-- Languages Form -->
       <form @submit="addLanguage" class="languages-form">
@@ -219,6 +242,7 @@ add description -->
 
       <br/>
 
+      <!-- Description -->
       <label for="description">Description</label>
       <input required v-model="description" type="text" name="description" value="">
 
@@ -273,6 +297,10 @@ export default {
       // languages
       languages: [],
       languageName: '',
+      // senses
+      senses: [],
+      senseName: '',
+      senseRange: 60,
       // environments
       environments: [],
       environmentName: '',
@@ -313,6 +341,16 @@ export default {
 
     removeSkill(skill) {
       this.skills = this.skills.filter(s => s !== skill)
+    },
+
+    addSense(e) {
+      e.preventDefault()
+      this.senses = this.senses.filter(s => s.name !== this.senseName)
+      this.senses.push({name: this.senseName, range: this.senseRange})
+    },
+
+    removeSense(sense) {
+      this.senses = this.senses.filter(s => s !== sense)
     },
 
     addLanguage(e) {
