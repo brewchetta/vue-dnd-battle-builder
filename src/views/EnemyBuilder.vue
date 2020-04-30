@@ -248,6 +248,8 @@ break environment / language / skills / senses into their own component
 
       <br/>
 
+      <MonsterAttrListForm :formName="'something'" @add-something="addSomething" :formFields="{name: '', id: ''}" />
+
       <input type="submit" name="submit" value="Submit">
 
     </form>
@@ -257,10 +259,13 @@ break environment / language / skills / senses into their own component
 
 <script>
 import fetchService from '@/fetchService'
+import MonsterAttrListForm from '@/components/MonsterAttrListForm'
 
 export default {
   name: 'EnemyBuilderMain',
-
+  components: {
+    MonsterAttrListForm
+  },
   data() {
     return {
       id: 0,
@@ -375,6 +380,10 @@ export default {
 
     removeEnvironment(environment) {
       this.environments = this.environments.filter(l => l !== environment)
+    },
+
+    addSomething(object) {
+      console.log('the object passed up is: ', object)
     }
   }
 }
